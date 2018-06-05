@@ -10,26 +10,28 @@
     <header class="header">
       <div class="header__top">
         <div class="container">
-          <p class="logo header__logo">Техномарт</p>
-          <form class="header__search-form">
-            <div>
-              <input type="search" placeholder="Поиск:">
+          <div class="row">
+            <p class="logo header__logo">Техномарт</p>
+            <form class="header__search-form">
+                <input type="search" placeholder="Поиск:">
+            </form>
+            <div class="header-buttons">
+              <a href="#" class="header__button header__button--bookmarks">Закладки: 0</a>
+              <a href="#" class="header__button header__button--cart">Корзина: 0</a>
+              <a href="#" class="header__button header__button--order">Оформить заказ</a>
             </div>
-          </form>
-          <a href="#" class="header__button header__button--bookmarks">Закладки: 0</a>
-          <a href="#" class="header__button header__button--cart">Корзина: 0</a>
-          <a href="#" class="header__button header__button--order">Оформить заказ</a>
+          </div>
         </div>
       </div>
       <div class="header__bottom">
-        <div class="container">
+        <div class="container container-column">
           <div class="row">
             <h1 class="header__heading">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
             <div class="header-contacts">
               <p class="header-contacts__phone">+7 (812) 555-05-55</p>
               <p class="header-contacts__address">г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8</p>
             </div>
-            <ul class="header__user-navigation user-navigation">
+            <ul class="user-navigation header__user-navigation">
               <li class="user-navigation__item user-navigation__item--login"><a href="#">Войти</a></li>
               <li class="user-navigation__item"><a href="#">Регистрация</a></li>
             </ul>
@@ -52,35 +54,32 @@
     </header>
     <main>
       <div class="container">
-        <section class="main-features">
+        <section class="main-features clearfix">
           <h2 class="visually-hidden">Преимущества</h2>
-          <ul class="main-features-list">
-            <li class="feature feature--materials feature--new">
-              <h3 class="feature__title">Материалы</h3>
-              <a href="#" class="btn btn--transparent feature__btn">На любой вкус</a>
-            </li>
-            <li class="feature feature--tools">
-              <h3 class="feature__title">Инструмент</h3>
-              <a href="#" class="btn btn--transparent feature__btn">На все случаи</a>
-            </li>
-            <li class="feature feature--tech">
-              <h3 class="feature__title">Техника</h3>
-              <a href="#" class="btn btn--transparent feature__btn">Для стройки</a>
-            </li>
-            <li class="feature feature--discounts">
-              <h3 class="feature__title">Скидки 50%</h3>
-              <a href="#" class="btn btn--transparent feature__btn">На 350 товаров</a>
-            </li>
-            <li class="feature feature--delivery">
-              <h3 class="feature__title">Доставка</h3>
-              <a href="#" class="btn btn--transparent feature__btn">Бесплатно</a>
-            </li>
-            <li class="feature feature--slider">
-              <h3 class="visually-hidden">Каталог товаров (слайдер)</h3>
-              <!-- Slider -->
-              <a class="btn btn--red feature__btn feature__btn--for-slider" href="catalog.html">Открыть каталог</a>
-            </li>
-          </ul>
+          <div class="feature feature--materials feature--new">
+            <h3 class="feature__title">Материалы</h3>
+            <a href="#" class="btn btn--transparent feature__btn">На любой вкус</a>
+          </div>
+          <div class="feature feature--tools">
+            <h3 class="feature__title">Инструмент</h3>
+            <a href="#" class="btn btn--transparent feature__btn">На все случаи</a>
+          </div>
+          <div class="feature feature--tech">
+            <h3 class="feature__title">Техника</h3>
+            <a href="#" class="btn btn--transparent feature__btn">Для стройки</a>
+          </div>
+          <div class="feature feature--slider">
+            <h3 class="visually-hidden">Каталог товаров (слайдер)</h3>
+            <a class="btn btn--red feature__btn feature__btn--for-slider" href="catalog.html">Открыть каталог</a>
+            </div>
+          <div class="feature feature--discounts">
+            <h3 class="feature__title">Скидки 50%</h3>
+            <a href="#" class="btn btn--transparent feature__btn">На 350 товаров</a>
+          </div>
+          <div class="feature feature--delivery">
+            <h3 class="feature__title">Доставка</h3>
+            <a href="#" class="btn btn--transparent feature__btn">Бесплатно</a>
+          </div>
         </section>
         <section class="main-popular-products">
           <div class="section-popular-header">
@@ -214,8 +213,9 @@
                 <h3 class="service-item__title">Доставка</h3>
                 <p class="service-item__description">
                   Мы с удовольствием доставим ваш товар прямо
-                  к вашему подъезду совершенно бесплатно!<br>
-                  Ведь мы неплохо заработаем,<br>
+                  к вашему подъезду совершенно бесплатно!
+                </p>
+                <p>Ведь мы неплохо заработаем,<br>
                   поднимая его на ваш этаж!
                 </p>
               </div>

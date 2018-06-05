@@ -43,12 +43,32 @@
 }
 
 /* Common layout classes start */
+.clearfix:after{
+    content: '';
+    clear: both;
+    display: table;
+}
 .container {
     width: 940px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0;
     margin-bottom: 0;
+}
+.container-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+.visually-hidden {
+    display: none;
 }
 
 /* Common style classes */
@@ -64,7 +84,45 @@
     line-height: 42px;
     font-family: "Cuprum"
 }
-
+.logo:hover {
+    background: #ca2c37;
+    box-shadow: 0px 5px 0 0 #8e1e26;
+}
+/* Buttons */
+.btn {
+    height: 38px;
+    line-height: 38px;
+    font-family: "Cuprum";
+    font-size: 14px;
+    display: inline-block;
+    text-decoration: inherit;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+    padding-left: 27px;
+    padding-right: 27px;
+    background: gray;
+    border-radius: 3px;
+    color: white;
+}
+.btn--transparent {
+    background: rgba(0, 0, 0, 0.1);
+}
+.btn--transparent:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+.btn--transparent:active {
+    background: rgba(0, 0, 0, 0.3);
+}
+.btn--red {
+    background: #ee3643;
+}
+.btn--red:hover {
+    background: #ca2c37;
+}
+.btn--red:active {
+    background: #ba2732;
+}
 /* Header */
 .header__top {
     height: 42px;
@@ -74,20 +132,26 @@
     height: 278px;
     background: #f4f7f9;
     padding-top: 44px;
+    padding-bottom: 65px;
+    box-sizing: border-box;
 }
 .header__logo {
     height: 42px;
     width: 220px;
-    font-size: 22px;
+    min-width: 220px;
+    font-size: 26px;
 }
-.header__search-form {
-    display: inline-block;
+
+/* Header buttons */
+.header-buttons {
+    display: flex;
+    flex-direction: row;
 }
 .header__button {
-    color: white;
+    color: rgba(255, 255, 255, 1);
     font-family: "Cuprum";
     line-height: 42px;
-    font-size: 16px;
+    font-size: 17px;
     text-align: center;
     vertical-align: middle;
     height: 42px;
@@ -98,17 +162,42 @@
 .header__button--order {
     background: #63a63e;
 }
+.header__button--order:hover {
+    background: #5fbb2d;
+}
+.header__button--order:active {
+    background: #518534;
+    color: rgba(255, 255, 255, 0.5);
+}
+.header__button--bookmarks:hover,.header__button--cart:hover {
+    background: #212a3a;
+}
+.header__button--bookmarks:active,.header__button--cart:active {
+    background: #161d29;
+    color: rgba(255, 255, 255, 0.5);
+}
 .header__search-form {
     color: white;
     font-family: "Cuprum";
 }
+
+/* Header search form */
+.header__search-form {
+    display: inline-block;
+    width: 100%;
+    padding-left: 47px;
+}
+.header__search-form:focus-within {
+    background-color: white;
+}
 .header__search-form input[type=search] {
     background: #293449;
     color: white;
-    width: 230px;
-    height: 40px;
+    width: 100%;
+    height: 42px;
     border: 0px;
     margin: 0;
+    outline: none;
 }
 .header__search-form input[type=search]::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: white;
@@ -130,17 +219,21 @@
     color: black;
     opacity: 1; /* Firefox */
 }
+
+/* Header bottom block */
 .header__heading {
     color: #ee3643;
     font-family: "Cuprum";
-    font-size: 15px;
+    font-size: 16px;
     font-style: italic;
     margin: 0;
-    width: 200px;
+    width: 210px;
     display: inline-block;
     box-sizing: border-box;
     margin-right: 70px;
 }
+
+/* Header contacts block */
 .header-contacts {
     width: 270px;
     display: inline-block;
@@ -148,7 +241,7 @@
 .header-contacts__phone {
     font-family: "Cuprum";
     color: #ee3643;
-    font-size: 22px;
+    font-size: 21px;
     height: 45px;
     border: 3px solid white;
     line-height: 45px;
@@ -166,6 +259,138 @@
     box-sizing: border-box;
     margin: 0;
     margin-top: 10px;
+}
+
+/* Header user navigation */
+.user-navigation {
+    display: inline-block;
+    margin: 0;
+}
+.user-navigation__item {
+    background: white;
+    width: 150px;
+    height: 45px;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0;
+    display: inline-block;
+    line-height: 45px;
+    font-family: "Cuprum";
+    font-size: 21px;
+}
+.user-navigation__item a {
+    color: black;
+    text-decoration: inherit;
+}
+.user-navigation__item a:hover {
+    color: #ee3643;
+}
+.user-navigation__item a:active {
+    color: rgba(0, 0, 0, 0.3);
+}
+.user-navigation__item--login {
+    width: 121px;
+    padding-left: 21px;
+}
+
+/* Header site navigation */
+.header__navigation {
+    height: 55px;
+    background: #32425c;
+    box-shadow: 0px 5px 0 0 #293449;
+    width: 100%;
+}
+.header__site-navigation {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+.header__site-navigation li {
+    display: inline-block;
+    font-family: "Cuprum";
+    font-size: 17px;
+    text-align: left;
+    line-height: 55px;
+    vertical-align: middle;
+    text-align: center;
+    width: auto;
+    flex: auto;
+}
+.header__site-navigation li:hover {
+    background: #293449;
+}
+.header__site-navigation li:active {
+    background: #1d2739;
+}
+.header__site-navigation li a {
+    color: rgba(255, 255, 255, 1);
+    text-decoration: inherit;
+    display:inline-block;
+    width:100%;
+    height:100%;
+}
+.header__site-navigation li a:active {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Features */
+.main-features {
+    margin: 0;
+    padding-top: 59px;
+}
+.feature {
+    width: 300px;
+    height: 123px;
+    margin-bottom: 20px;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.feature:nth-child(4),
+.feature:nth-child(6),
+.feature:nth-child(7) {
+  margin-right: 0;
+}
+.feature--materials {
+    background-color: #ffbf47;
+}
+.feature--tools {
+    background-color: #3bbce3;
+}
+.feature--tech {
+    background-color: #dc91d8;
+}
+.feature--discounts {
+    background-color: #8ed78f;
+}
+.feature--delivery {
+    background-color: #ffc047;
+}
+.feature--slider {
+    background-color: lightgray;
+    width: 620px;
+    height: 266px;
+}
+.feature__title {
+    font-family: "Cuprum";
+    font-weight: bold;
+    font-size: 24px;
+    color: white;
+    margin: 0;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+.feature__btn {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+.feature__btn--for-slider {
+    padding-left: 49px;
+    padding-right: 45px;
 }
 
 .old-price {
