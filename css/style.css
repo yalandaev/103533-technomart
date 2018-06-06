@@ -191,6 +191,48 @@
 	border-width: 19px;
 	margin-top: -19px;
 }
+
+/* Ribbons */
+.ribbon p {
+    background: lightgray;
+    color: #fff;
+    text-decoration: none;
+    font-family: "PTSans";
+    text-align: center;
+    padding: 5px 30px;
+    line-height: 27px;
+    position: relative;
+    /* cursor: default; */
+}
+.ribbon--red p {
+    background: #ee3643;
+}
+.ribbon p::after {
+    bottom: 1px;
+    top: auto;
+}
+.ribbon {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    right: 0;
+    width: 200px;
+    overflow: hidden;
+    height: 200px;
+    z-index: 1;
+    pointer-events: none;
+}
+.ribbon p {
+    width: 200px;
+    top: -10px;
+    right: -42px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+
 /* Header */
 .header__top {
     height: 42px;
@@ -529,8 +571,8 @@
     padding: 5px;
 }
 .catalog-item__image img {
-    width: 210px;
-    height: 145px;
+    width: 218px;
+    height: 143px;
 }
 .catalog-item__title {
     order: 1;
@@ -575,44 +617,25 @@
     z-index: 999;
 }
 
-
-/* Ribbons */
-.ribbon p {
-    background: lightgray;
-    color: #fff;
-    text-decoration: none;
-    font-family: "PTSans";
-    text-align: center;
-    padding: 5px 30px;
-    line-height: 27px;
-    position: relative;
-    /* cursor: default; */
+/* Manufacturers */
+.manufacturers-items-list {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
 }
-.ribbon--red p {
-    background: #ee3643;
+.manufacturers-item {
+    display: inline-block;;
+    border: 1px solid #eaeaea;
+    margin-right: 20px;
+    flex: auto;
+    box-sizing: border-box;
+    width: 220px;
+    height: 145px;
+    margin-bottom: 20px;
 }
-.ribbon p::after {
-    bottom: 1px;
-    top: auto;
-}
-.ribbon {
-    position: absolute;
-    display: inline-block;
-    top: 0;
-    right: 0;
-    width: 200px;
-    overflow: hidden;
-    height: 200px;
-    z-index: 1;
-    pointer-events: none;
-}
-.ribbon p {
-    width: 200px;
-    top: -10px;
-    right: -42px;
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
+.manufacturers-item:nth-child(4n) {
+    margin-right: 0;
 }
