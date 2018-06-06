@@ -528,6 +528,10 @@
     flex: auto;
     padding: 5px;
 }
+.catalog-item__image img {
+    width: 210px;
+    height: 145px;
+}
 .catalog-item__title {
     order: 1;
     color: black;
@@ -565,13 +569,16 @@
 }
 .catalog-item-actions li {
     display: block;
+    z-index: 19992;
 }
-
+.catalog-item-actions li a {
+    z-index: 999;
+}
 
 
 /* Ribbons */
 .ribbon p {
-    background: #ee3643;
+    background: lightgray;
     color: #fff;
     text-decoration: none;
     font-family: "PTSans";
@@ -579,30 +586,33 @@
     padding: 5px 30px;
     line-height: 27px;
     position: relative;
+    /* cursor: default; */
+}
+.ribbon--red p {
+    background: #ee3643;
 }
 .ribbon p::after {
     bottom: 1px;
     top: auto;
 }
-@media screen and (min-width:800px) {
-    .ribbon {
-        position: absolute;
-        display: inline-block;
-        top: 0;
-        right: 0;
-        width: 200px;
-        overflow: hidden;
-        height: 200px;
-        z-index: 9999;
-    }
-    .ribbon p {
-        width: 200px;
-        top: -10px;
-        right: -42px;
-        transform: rotate(45deg);
-        -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-        -moz-transform: rotate(45deg);
-        -o-transform: rotate(45deg);
-    }
+.ribbon {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    right: 0;
+    width: 200px;
+    overflow: hidden;
+    height: 200px;
+    z-index: 1;
+    pointer-events: none;
+}
+.ribbon p {
+    width: 200px;
+    top: -10px;
+    right: -42px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
 }
