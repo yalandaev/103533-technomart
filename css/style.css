@@ -67,10 +67,18 @@
     justify-content: space-between;
     flex-wrap: nowrap;
 }
+.row--align-bottom {
+    align-items: flex-end;
+}
+.row--align-top {
+    align-items: flex-start;
+}
 .visually-hidden {
     display: none;
 }
-
+.float-right {
+    float: right;
+}
 /* Common style classes */
 .logo {
     color: white;
@@ -81,8 +89,9 @@
     text-transform: uppercase;
     margin: 0;
     display: inline-block;
-    line-height: 42px;
-    font-family: "Cuprum"
+    font-family: "Cuprum";
+    width: 220px;
+    min-width: 220px;
 }
 .logo:hover {
     background: #ca2c37;
@@ -232,6 +241,23 @@
     -moz-transform: rotate(45deg);
     -o-transform: rotate(45deg);
 }
+/* Sections common styles */
+.section-title {
+    color: black;
+    font-family: "Cuprum";
+    font-size: 30px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 0;
+    margin-bottom: 24px;
+}
+.section-description {
+    font-family: "PTSans";
+    font-size: 13px;
+    line-height: 25px;
+    margin-bottom: 35px;
+    margin-top: 0;
+}
 
 /* Header */
 .header__top {
@@ -247,9 +273,8 @@
 }
 .header__logo {
     height: 42px;
-    width: 220px;
-    min-width: 220px;
     font-size: 26px;
+    line-height: 42px;
 }
 
 /* Header buttons */
@@ -518,14 +543,12 @@
     align-items: center;
     margin-bottom: 20px;
 }
-.section-title {
-    color: #32425c;
-    font-family: "Cuprum";
-    font-size: 30px;
-    text-transform: uppercase;
-}
 .section-popular-header__title {
     flex: auto;
+    color: #32425c;
+    line-height: 89px;
+    vertical-align: middle;
+    margin: 0;
 }
 .section-popular-header__btn {
     padding-left: 55px;
@@ -568,7 +591,7 @@
     order: 0;
     align-self: flex-start;
     flex: auto;
-    padding: 5px;
+    padding: 1px;
 }
 .catalog-item__image img {
     width: 218px;
@@ -618,6 +641,9 @@
 }
 
 /* Manufacturers */
+.main-manufacturers {
+    margin-bottom: 85px;
+}
 .manufacturers-items-list {
     display: inline-flex;
     flex-direction: row;
@@ -636,6 +662,162 @@
     height: 145px;
     margin-bottom: 20px;
 }
+.manufacturers-item:nth-last-child(-n+4) {
+    margin-bottom: 0;
+}
 .manufacturers-item:nth-child(4n) {
     margin-right: 0;
+}
+
+/* Section - Services */
+.main-services {
+    background: #f4f8fa;
+    padding-top: 68px;
+}
+/* Section - Company */
+.main-company__description {
+    width: 550px;
+}
+.main-contacts__description {
+    width: 300px;
+}
+.main-company {
+    height: 100%;
+    padding-top: 82px;
+}
+.main-company__cargo-companies {
+    padding: 0;
+    margin: 0;
+}
+.main-company__cargo-companies li {
+    list-style: none;
+    font-family: "Cuprum";
+    font-size: 18px;
+    padding-bottom: 20px;
+}
+.main-company__cargo-companies li::before {
+    display: inline-block;
+    background: #ee3643;
+    width: 25px;
+    height: 2px;
+    margin-bottom: 4px;
+    margin-right: 11px;
+    content: "";
+}
+/* Section = Contacts */
+.main-contacts {
+    display: inline-flex;
+    flex-direction: column;
+    padding-top: 82px;
+}
+
+/* Footer */
+.footer {
+    margin-top: 86px;
+}
+.footer-top {
+    background: #32425c;
+    height: 193px;
+}
+.footer-bottom {
+    background: #293449;
+    height: 107px;
+}
+.footer__logo {
+    height: 63px;
+    line-height: 63px;
+    font-size: 30px;
+}
+.footer__navigation {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+.footer__navigation li {
+    display: inline-block;
+    font-family: "Cuprum";
+    font-size: 18px;
+    text-align: left;
+    vertical-align: middle;
+    text-align: center;
+    width: auto;
+    flex: auto;
+    margin-right: 60px;
+}
+.footer__navigation li:nth-last-child(1) {
+    margin-right: 0;
+}
+.footer__navigation li:hover {
+    text-decoration: underline;
+}
+.footer__navigation li a {
+    color: rgba(255, 255, 255, 1);
+    text-decoration: inherit;
+    display:inline-block;
+    width:100%;
+    height:100%;
+}
+.footer__navigation li a:active {
+    color: rgba(255, 255, 255, 0.5);
+}
+.footer__navigation--site-nav {
+    margin-bottom: 8px;
+}
+.footer__navigation--catalog-nav {
+    margin-top: 40px;
+}
+.footer__navigation--catalog-nav li a {
+    color: rgba(255, 209, 128, 1);
+}
+.footer__navigation--catalog-nav li a:active {
+    color: rgba(255, 209, 128, 0.5);
+}
+.footer__address {
+    font-family: "Cuprum";
+    font-size: 18px;
+    color: white;
+    margin-top: 40px;
+}
+.footer__bottom-text {
+    font-family: "Cuprum";
+    font-size: 16px;
+    color: white;
+    margin-top: 37px;
+    display: inline-block;
+}
+.footer__bottom-text a {
+    color: rgba(255, 209, 128, 1);
+    text-decoration: none;
+}
+.footer__bottom-text a:hover {
+    text-decoration: underline;
+}
+.footer__bottom-text a:active {
+    text-decoration: none;
+    color: #ee3643;
+}
+.footer__social-btns {
+    display: inline-flex;
+    margin-top: 34px;
+    padding: 0;
+    margin-right: 120px;
+}
+.footer__social-btns li {
+    list-style: none;
+}
+.social-btn {
+    background: #212a3a;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-right: 5px;
+}
+.social-btn:hover {
+    background: #ee3643;
+}
+.footer__feedback {
+    margin-right: 50px;
 }
