@@ -311,19 +311,18 @@
     background: #161d29;
     color: rgba(255, 255, 255, 0.5);
 }
-.header__search-form {
-    color: white;
-    font-family: "Cuprum";
-}
 
 /* Header search form */
 .header__search-form {
+    color: white;
+    font-family: "Cuprum";
     display: inline-block;
     width: 100%;
     padding-left: 47px;
 }
 .header__search-form:focus-within {
     background-color: white;
+    color: black;
 }
 .header__search-form input[type=search] {
     background: #293449;
