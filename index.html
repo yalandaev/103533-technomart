@@ -31,10 +31,12 @@
               <p class="header-contacts__phone">+7 (812) 555-05-55</p>
               <p class="header-contacts__address">г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8</p>
             </div>
-            <ul class="user-navigation header__user-navigation">
-              <li class="user-navigation__item user-navigation__item--login"><a href="#">Войти</a></li>
-              <li class="user-navigation__item"><a href="#">Регистрация</a></li>
-            </ul>
+            <nav class="header__user-navigation">
+              <ul class="user-navigation">
+                <li class="user-navigation__item user-navigation__item--login"><a href="#">Войти</a></li>
+                <li class="user-navigation__item"><a href="#">Регистрация</a></li>
+              </ul>
+            </nav>
           </div>
           <div class="row">
             <nav class="header__navigation">
@@ -82,9 +84,9 @@
           </div>
         </section>
         <section class="main-popular-products">
-          <div class="section-popular-header clearfix">
-            <h2 class="section-title section-popular-header__title">Популярные товары:</h2>
-            <a class="btn btn--red section-popular-header__btn" href="#">Все популярные товары</a>
+          <div class="section-header section-header--popular clearfix">
+            <h2 class="section-title section-title--popular section-header__title">Популярные товары:</h2>
+            <a class="btn btn--red section-header__btn" href="#">Все популярные товары</a>
           </div>
           <ul class="catalog-items">
             <li class="catalog-item">
@@ -139,8 +141,8 @@
           </ul>
         </section>
         <section class="main-manufacturers">
-          <div class="section-popular-header">
-            <h2 class="section-title section-popular-header__title">Популярные производители:</h2>
+          <div class="section-header section-header--popular">
+            <h2 class="section-title section-title--popular section-header__title">Популярные производители:</h2>
             <a class="btn btn--red section-popular-header__btn" href="#">Все производители</a>
           </div>
           <ul class="manufacturers-items-list">
@@ -195,7 +197,7 @@
           </ul>
         </section>
       </div>
-        <section class="main-services">
+        <section class="section main-services">
           <div class="container">
             <h2 class="section-title main-services__title">Сервисы</h2>
             <p class="main-services__description">
@@ -206,9 +208,10 @@
             <div class="tab-panel tab-panel--vertical main-services__tab-panel">
               <div class="tabs-container main-services__tabs-container">
                 <ul class="tabs main-services__tabs">
-                  <li class="tab main-services__tab main-services__tab--active">Доставка</li>
-                  <li class="tab main-services__tab">Гарантия</li>
-                  <li class="tab main-services__tab">Кредит</li>
+                  <!-- Давать кнопкам классы, или достаточно того, что классы есть у li? -->
+                  <li class="tab main-services__tab main-services__tab--active"><button>Доставка</button></li>
+                  <li class="tab main-services__tab"><button>Гарантия</button></li>
+                  <li class="tab main-services__tab"><button>Кредит</button></li>
                 </ul>
               </div>
               <div class="tabs-content main-services__tabs-content">
@@ -243,7 +246,7 @@
           </div>
         </section>
       <div class="container">
-        <div class="row row--align-top">
+        <div class="row row--align-top section-company-contacts">
           <section class="main-company">
             <h2 class="section-title">Компания "Техномарт"</h2>
             <p class="section-description main-company__description">

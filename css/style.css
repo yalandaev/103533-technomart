@@ -74,7 +74,14 @@
     align-items: flex-start;
 }
 .visually-hidden {
-    display: none;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 .float-right {
     float: right;
@@ -96,6 +103,9 @@
 .logo:hover {
     background: #ca2c37;
     box-shadow: 0px 5px 0 0 #8e1e26;
+}
+.logo {
+    text-decoration: inherit;
 }
 /* Buttons */
 .btn {
@@ -200,6 +210,11 @@
 	border-width: 19px;
 	margin-top: -19px;
 }
+/* Panels */
+.panel {
+    background: #f7f3ec;
+    border-radius: 2px;
+}
 
 /* Ribbons */
 .ribbon p {
@@ -242,6 +257,10 @@
     -o-transform: rotate(45deg);
 }
 /* Sections common styles */
+.section {
+    background: #f4f8fa;
+    padding-top: 68px;
+}
 .section-title {
     color: black;
     font-family: "Cuprum";
@@ -258,7 +277,33 @@
     margin-bottom: 35px;
     margin-top: 0;
 }
-
+.section-description:nth-last-child(1) {
+    margin-bottom: 0;
+}
+.section-header {
+    background: #f9f5f0;
+    height: 89px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 24px;
+    padding-top: 25px;
+    padding-bottom: 26px;
+    padding-left: 30px;
+    box-sizing: border-box;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.section-header__title {
+    flex: auto;
+    line-height: 89px;
+    vertical-align: middle;
+    margin: 0;
+}
+.section-header__btn {
+    padding-left: 55px;
+    padding-right: 55px;
+}
 /* Header */
 .header__top {
     height: 42px;
@@ -402,7 +447,7 @@
 }
 .user-navigation__item {
     background: white;
-    width: 150px;
+    min-width: 150px;
     height: 45px;
     text-align: center;
     vertical-align: middle;
@@ -425,6 +470,10 @@
 .user-navigation__item--login {
     width: 121px;
     padding-left: 21px;
+}
+.user-navigation__item--logged {
+    padding-left: 47px;
+    padding-right: 69px;
 }
 
 /* Header site navigation */
@@ -528,39 +577,27 @@
 }
 
 /* Popular products */
-.section-popular-header {
+.section-header--popular {
     background: #f9f5f0;
-    height: 89px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-right: 24px;
-    padding-top: 25px;
-    padding-bottom: 26px;
-    padding-left: 30px;
-    box-sizing: border-box;
-    align-items: center;
-    margin-bottom: 20px;
 }
-.section-popular-header__title {
-    flex: auto;
+.section-title--popular {
     color: #32425c;
-    line-height: 89px;
-    vertical-align: middle;
-    margin: 0;
-}
-.section-popular-header__btn {
-    padding-left: 55px;
-    padding-right: 55px;
 }
 
 /* Catalog */
+.section-header--catalog {
+    background: #f2f6f9;
+}
+.section-title--catalog {
+    color: #32425c;
+}
 .catalog-items {
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: row;
     margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 .catalog-item {
     height: 318px;
@@ -583,8 +620,14 @@
 .catalog-item:hover>.catalog-item-actions {
     display: block;
 }
-.catalog-item:nth-child(4n) {
+/* Default case - full page width (4 items per row) */
+.main-popular-products .catalog-item:nth-child(4n) {
     margin-right: 0;
+}
+/* Catalog case (3 items per row) */
+.catalog__content .catalog-item:nth-child(3n) {
+    margin-right: 0;
+    margin-bottom: 20px;
 }
 .catalog-item__image {
     order: 0;
@@ -638,7 +681,34 @@
 .catalog-item-actions li a {
     z-index: 999;
 }
+.catalog__filter {
+    width: 220px;
+    min-width: 220px;
+    margin-right: 20px;
+}
+.sort-panel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.sort-options {
+    display: inline-block;
+}
+.sort-options__option {
+    display: inline-block;
+}
 
+/* Pagination */
+.pagination, .pagination__item {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+/* Section */
+.words-about {
+    padding-bottom: 76px;
+}
 /* Manufacturers */
 .main-manufacturers {
     margin-bottom: 85px;
@@ -669,9 +739,11 @@
 }
 
 /* Section - Services */
+.section-company-contacts {
+    padding-bottom: 86px;
+}
 .main-services {
-    background: #f4f8fa;
-    padding-top: 68px;
+    padding-bottom: 20px;
 }
 /* Section - Company */
 .main-company__description {
@@ -712,7 +784,7 @@
 
 /* Footer */
 .footer {
-    margin-top: 86px;
+    /* margin-top: 86px; */
 }
 .footer-top {
     background: #32425c;
