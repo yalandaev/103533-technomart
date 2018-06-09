@@ -156,14 +156,17 @@
     color: #c1c6ce;
 }
 .btn--buy {
-    background: #63a63e;
+    background-color: #63a63e;
+    background-image: url(/img/cart-icon.svg);
+    background-repeat: no-repeat;
+    background-position:  9px 10px;
     box-shadow: 0px -3px 0 0 #367315 inset;
 }
 .btn--buy:hover {
-    background: #5fbb2d;
+    background-color: #5fbb2d;
 }
 .btn--buy:active {
-    background: #518534;
+    background-color: #518534;
 }
 /* Labels */
 .label {
@@ -350,11 +353,18 @@
     color: rgba(255, 255, 255, 0.5);
 }
 .header__button--bookmarks:hover,.header__button--cart:hover {
-    background: #212a3a;
+    background-color: #212a3a;
 }
 .header__button--bookmarks:active,.header__button--cart:active {
-    background: #161d29;
+    background-color: #161d29;
     color: rgba(255, 255, 255, 0.5);
+}
+
+.header__button--bookmarks {
+    background: url(/img/icon-bookmark.svg) 9px 10px no-repeat;
+}
+.header__button--cart {
+    background: url(/img/cart-icon.svg) 9px 10px no-repeat;
 }
 
 /* Header search form */
@@ -429,6 +439,7 @@
     padding-left: 45px;
     box-sizing: border-box;
     margin: 0;
+    background: url(/img/icon-phone.svg) 15px 10px no-repeat;
 }
 .header-contacts__address {
     font-family: "Cuprum";
@@ -446,7 +457,7 @@
     margin: 0;
 }
 .user-navigation__item {
-    background: white;
+    background-color: white;
     min-width: 150px;
     height: 45px;
     text-align: center;
@@ -470,6 +481,7 @@
 .user-navigation__item--login {
     width: 121px;
     padding-left: 21px;
+    background: url(/img/icon-login.svg) white 20px 14px no-repeat;
 }
 .user-navigation__item--logged {
     padding-left: 47px;
