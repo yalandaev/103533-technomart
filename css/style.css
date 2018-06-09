@@ -538,19 +538,19 @@
   margin-right: 0;
 }
 .feature--materials {
-    background-color: #ffbf47;
+    background: url(/img/icon-1.svg) #ffbf47 213px 31px no-repeat;
 }
 .feature--tools {
-    background-color: #3bbce3;
+    background: url(/img/icon-2.svg) #3bbce3 197px 31px no-repeat;
 }
 .feature--tech {
-    background-color: #dc91d8;
+    background: url(/img/icon-3.svg) #dc91d8 191px 31px no-repeat;
 }
 .feature--discounts {
-    background-color: #8ed78f;
+    background: url(/img/icon-4.svg) #8ed78f 196px 31px no-repeat;
 }
 .feature--delivery {
-    background-color: #ffc047;
+    background: url(/img/icon-5.svg) #ffc047 191px 31px no-repeat;
 }
 .feature--slider {
     background-color: lightgray;
@@ -879,7 +879,7 @@
     list-style: none;
 }
 .social-btn {
-    background: #212a3a;
+    background-color: #212a3a;
     width: 40px;
     height: 40px;
     border-radius: 20px;
@@ -887,7 +887,16 @@
     margin-right: 5px;
 }
 .social-btn:hover {
-    background: #ee3643;
+    background-color: #ee3643;
+}
+.social-btn--vk {
+    background: url(/img/vk-icon.svg) #212a3a 6px 13px no-repeat;
+}
+.social-btn--fb {
+    background: url(/img/fb-icon.svg) #212a3a 13px 10px no-repeat;
+}
+.social-btn--instagram {
+    background: url(/img/insta-icon.svg) #212a3a 9px 10px no-repeat;
 }
 .footer__feedback {
     margin-right: 50px;
