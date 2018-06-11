@@ -83,8 +83,24 @@
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
+.hidden {
+    display: none;
+}
 .float-right {
     float: right;
+}
+.modal {
+    position: absolute;
+    box-shadow: black 0 0 20px 0px;
+}
+.modal-close {
+    background: url(/img/icon-close.svg) no-repeat;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
 }
 /* Common style classes */
 .logo {
@@ -655,11 +671,11 @@
     border-radius: 50%;
     display: inline-block;
 }
-
 .slider__btn-dot--active {
     background-color: #ff3333;
     box-shadow: white 0px 0px 0 3px inset;
 }
+
 /* Popular products */
 .section-header--popular {
     background: #f9f5f0;
@@ -864,8 +880,13 @@
     display: inline-flex;
     flex-direction: column;
     padding-top: 82px;
+    position: relative;
 }
-
+.modal-map {
+    right: 0px;
+    bottom: -87px;
+    height: 446px;
+}
 /* Footer */
 .footer {
     /* margin-top: 86px; */
