@@ -72,6 +72,28 @@
             <a href="#" class="btn btn--transparent feature__btn">Для стройки</a>
           </div>
           <div class="feature feature--slider">
+            <div class="slider">
+                <div class="slider-item slider-item--active">
+                  <div class="slider-item__heading">
+                    <h3>Перфораторы</h3>
+                    <p>Настоящие мужские игрушки</p>
+                  </div>
+                  <img class="slider-item__img" src="img/slider-2.jpg" alt="Дрели">
+                </div>
+              <div class="slider-item">
+                <div class="slider-item__heading">
+                  <h3>Дрели</h3>
+                  <p>Соседям на радость</p>
+                </div>
+                <img class="slider-item__img" src="img/slider-1.jpg" alt="Дрели">
+              </div>
+              <button onclick="setPrevSlide()" class="slider__btn-prev"></button>
+              <button onclick="setNextSlide()" class="slider__btn-next"></button>
+              <div class="slider__dots">
+                <button class="slider__btn-dot" onclick="setSlideByIndex(1)"></button> 
+                <button class="slider__btn-dot" onclick="setSlideByIndex(2)"></button> 
+              </div>
+            </div>
             <h3 class="visually-hidden">Каталог товаров (слайдер)</h3>
             <a class="btn btn--red feature__btn feature__btn--for-slider" href="catalog.html">Открыть каталог</a>
             </div>
@@ -348,4 +370,5 @@
     </section>
     <!-- Modal windows end -->
   </body>
+  <script src="js/slider.js"></script>
 </html>
