@@ -94,13 +94,14 @@
     box-shadow: black 0 0 20px 0px;
 }
 .modal-close {
-    background: url(/img/icon-close.svg) no-repeat;
+    background: url(../img/icon-close.svg) no-repeat;
     position: absolute;
     right: 10px;
     top: 10px;
     width: 22px;
     height: 22px;
     cursor: pointer;
+    border: 0;
 }
 /* Common style classes */
 .logo {
@@ -173,7 +174,7 @@
 }
 .btn--buy {
     background-color: #63a63e;
-    background-image: url(/img/icon-cart.svg);
+    background-image: url(../img/icon-cart.svg);
     background-repeat: no-repeat;
     background-position:  9px 10px;
     box-shadow: 0px -3px 0 0 #367315 inset;
@@ -377,10 +378,10 @@
 }
 
 .header__button--bookmarks {
-    background: url(/img/icon-bookmark.svg) 9px 10px no-repeat;
+    background: url(../img/icon-bookmark.svg) 9px 10px no-repeat;
 }
 .header__button--cart {
-    background: url(/img/icon-cart.svg) 9px 10px no-repeat;
+    background: url(../img/icon-cart.svg) 9px 10px no-repeat;
 }
 
 /* Header search form */
@@ -455,7 +456,7 @@
     padding-left: 45px;
     box-sizing: border-box;
     margin: 0;
-    background: url(/img/icon-phone.svg) 15px 10px no-repeat;
+    background: url(../img/icon-phone.svg) 15px 10px no-repeat;
 }
 .header-contacts__address {
     font-family: "Cuprum";
@@ -497,7 +498,7 @@
 .user-navigation__item--login {
     width: 121px;
     padding-left: 21px;
-    background: url(/img/icon-login.svg) white 20px 14px no-repeat;
+    background: url(../img/icon-login.svg) white 20px 14px no-repeat;
 }
 .user-navigation__item--logged {
     padding-left: 47px;
@@ -566,19 +567,19 @@
   margin-right: 0;
 }
 .feature--materials {
-    background: url(/img/icon-1.svg) #ffbf47 213px 31px no-repeat;
+    background: url(../img/icon-1.svg) #ffbf47 213px 31px no-repeat;
 }
 .feature--tools {
-    background: url(/img/icon-2.svg) #3bbce3 197px 31px no-repeat;
+    background: url(../img/icon-2.svg) #3bbce3 197px 31px no-repeat;
 }
 .feature--tech {
-    background: url(/img/icon-3.svg) #dc91d8 191px 31px no-repeat;
+    background: url(../img/icon-3.svg) #dc91d8 191px 31px no-repeat;
 }
 .feature--discounts {
-    background: url(/img/icon-4.svg) #8ed78f 196px 31px no-repeat;
+    background: url(../img/icon-4.svg) #8ed78f 196px 31px no-repeat;
 }
 .feature--delivery {
-    background: url(/img/icon-5.svg) #ffc047 191px 31px no-repeat;
+    background: url(../img/icon-5.svg) #ffc047 191px 31px no-repeat;
 }
 .feature__title {
     font-family: "Cuprum";
@@ -607,6 +608,14 @@
 }
 .slider-item {
     display: none;
+    width: 640px;
+    height: 265px;
+}
+.slider-item-1 {
+    background: url(../img/slider-1.jpg) no-repeat;
+}
+.slider-item-2 {
+    background: url(../img/slider-2.jpg) no-repeat;
 }
 .slider-item--active {
     display: block;
@@ -647,11 +656,11 @@
 .slider__btn-next {
     right: 0;
     border-radius: 3px 0 0 3px;
-    background-image: url(/img/icon-right.svg);
+    background-image: url(../img/icon-right.svg);
     margin-right: 25px;
 }
 .slider__btn-prev {
-    background-image: url(/img/icon-left.svg);
+    background-image: url(../img/icon-left.svg);
     margin-left: 25px;
 }
 .slider__dots {
@@ -995,13 +1004,13 @@
     background-color: #ee3643;
 }
 .social-btn--vk {
-    background: url(/img/icon-vk.svg) #212a3a 6px 13px no-repeat;
+    background: url(../img/icon-vk.svg) #212a3a 6px 13px no-repeat;
 }
 .social-btn--fb {
-    background: url(/img/icon-fb.svg) #212a3a 13px 10px no-repeat;
+    background: url(../img/icon-fb.svg) #212a3a 13px 10px no-repeat;
 }
 .social-btn--instagram {
-    background: url(/img/icon-insta.svg) #212a3a 9px 10px no-repeat;
+    background: url(../img/icon-insta.svg) #212a3a 9px 10px no-repeat;
 }
 .footer__feedback {
     margin-right: 50px;

@@ -73,19 +73,17 @@
           </div>
           <div class="feature feature--slider">
             <div class="slider">
-                <div class="slider-item slider-item--active">
+                <div class="slider-item slider-item-1 slider-item--active">
                   <div class="slider-item__heading">
                     <h3>Перфораторы</h3>
                     <p>Настоящие мужские игрушки</p>
                   </div>
-                  <img class="slider-item__img" src="img/slider-2.jpg" alt="Перфораторы">
                 </div>
-              <div class="slider-item">
+              <div class="slider-item slider-item-2">
                 <div class="slider-item__heading">
                   <h3>Дрели</h3>
                   <p>Соседям на радость</p>
                 </div>
-                <img class="slider-item__img" src="img/slider-1.jpg" alt="Дрели">
               </div>
               <button onclick="setPrevSlide()" class="slider__btn-prev"></button>
               <button onclick="setNextSlide()" class="slider__btn-next"></button>
@@ -298,7 +296,7 @@
             <div class="modal modal-map hidden">
               <h2 class="visually-hidden">Как до нас добраться</h2>
               <img src="/img/map-big.jpg" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
-              <span class="modal-close"></span>
+              <button class="modal-close"></button>
             </div>
             <a class="btn btn--red main-contacts__btn" href="#">Заблудились? Напишите нам!</a>
           </section>
@@ -367,7 +365,7 @@
       <h2 class="visually-hidden">Напишите нам</h2>
       <!-- Form placeholder -->
       <button type="button" class="button">Отправить</button>
-      <span class="modal-close">x</span>
+      <button class="modal-close">x</button>
     </section>
     
     <!-- Modal windows end -->
