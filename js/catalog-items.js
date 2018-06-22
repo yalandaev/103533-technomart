@@ -16,7 +16,7 @@ for (var i = 0; i < bookmarkButtons.length; i++) {
 /**
  * Обработчик события при focusin кнопки "Купить" или "В закладки"
  *
- * @param event - Радиус окружности.
+ * @param event - событие OnFocusIn
  */
 function onActionButtonFocus(event) {
     var actionsContainer = event.target.parentNode.parentNode;
@@ -25,7 +25,7 @@ function onActionButtonFocus(event) {
 /**
  * Обработчик события при focusout кнопки "Купить" или "В закладки"
  *
- * @param event - Радиус окружности.
+ * @param event - событие OnFocusOut
  */
 function onActionButtonFocusOut(event) {
     var actionsContainer = event.target.parentNode.parentNode;
