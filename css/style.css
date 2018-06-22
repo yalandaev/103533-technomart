@@ -90,7 +90,7 @@
     float: right;
 }
 .modal {
-    position: absolute;
+    position: fixed;
     box-shadow: black 0 0 20px 0px;
 }
 .modal-close {
@@ -118,15 +118,12 @@
     height: auto;
     clip: auto;
 }
-.p-3 {
-    padding: 16px !important;
-}
 
 .text-white {
-    color: #fff !important;
+    color: #fff;
 }
 .bg-blue {
-    background-color: #0366d6 !important;
+    background-color: #0366d6;
 }
 
 /* Common style classes */
@@ -215,6 +212,12 @@
 }
 .btn--buy:active {
     background-color: #518534;
+}
+.btn-sort {
+    width: 10px;
+    height: 10px;
+    background: red;
+    display: inline-block;
 }
 /* Labels */
 .label {
@@ -541,6 +544,9 @@
     padding-left: 47px;
     padding-right: 69px;
 }
+.user-navigation__item--logout {
+    min-width: 40px;
+}
 
 /* Header site navigation */
 .header__navigation {
@@ -851,6 +857,16 @@
     display: inline-block;
 }
 
+.modal-product-added {
+    position: fixed;
+    width: 620px;
+    left: 50%;
+    margin-left: -320px;
+    top: 150px;
+    background: white;
+    z-index: 100;
+}
+
 /* Pagination */
 .pagination, .pagination__item {
     display: inline-block;
@@ -945,7 +961,6 @@
 }
 .modal-write-us {
     position: fixed;
-    height: 430px;
     width: 620px;
     left: 50%;
     margin-left: -320px;
@@ -1076,4 +1091,47 @@
 }
 .footer__feedback {
     margin-right: 50px;
+}
+/* UI Controls */
+/* Checkbox */
+.filter-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.checkbox {
+    position: relative;
+    cursor: pointer;
+}
+.checkbox input[type="checkbox"] + .checkbox-indicator {
+    background: url(../img/checkbox-off.svg) no-repeat;
+    width: 26px;
+    height: 23px;
+    display: inline-block;
+}
+.checkbox input[type="checkbox"]:focus + .checkbox-indicator {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+.checkbox input[type="checkbox"]:checked + .checkbox-indicator {
+    background: url(../img/checkbox-on.svg) no-repeat;
+}
+/* Radiobutton */
+/* Checkbox */
+.radio-button {
+    position: relative;
+    cursor: pointer;
+}
+.radio-button input[type="radio"] + .radio-button-indicator {
+    background: url(../img/radio-off.svg) no-repeat;
+    width: 26px;
+    height: 26px;
+    display: inline-block;
+}
+.radio-button input[type="radio"]:focus + .radio-button-indicator {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+.radio-button input[type="radio"]:checked + .radio-button-indicator {
+    background: url(../img/radio-on.svg) no-repeat;
 }

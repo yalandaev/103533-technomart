@@ -8,17 +8,17 @@
   </head>
   <body>
     <header class="header">
-      <a href="#start-of-content" tabindex="1" class="p-3 bg-blue text-white show-on-focus js-skip-to-content">Skip to content</a>
+      <a href="#start-of-content" tabindex="1" class="p-3 bg-blue text-white show-on-focus">Перейти к содержимому</a>
       <div class="header__top">
         <div class="container">
           <div class="row">
             <p class="logo header__logo">Техномарт</p>
             <form class="header__search-form">
-                <input type="search" placeholder="Поиск:" aria-label="Поиск по сайту">
+                <input type="search" name="search" placeholder="Поиск:" aria-label="Поиск по сайту">
             </form>
             <div class="header-buttons">
-              <a href="#" class="header__button header__button--bookmarks" aria-label="Закладки">Закладки: 0</a>
-              <a href="#" class="header__button header__button--cart" aria-label="Корзина">Корзина: 0</a>
+              <a href="#" class="header__button header__button--bookmarks" aria-label="Закладки: нет закладок">Закладки: 0</a>
+              <a href="#" class="header__button header__button--cart" aria-label="Корзина: ничего не добавлено">Корзина: 0</a>
               <a href="#" class="header__button header__button--order">Оформить заказ</a>
             </div>
           </div>
@@ -30,11 +30,12 @@
             <h1 class="header__heading">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
             <div class="header-contacts">
               <p class="header-contacts__phone"><a href="tel:+7(812)555-05-55" aria-label="Наш телефон +7 (812) 555-05-55">+7 (812) 555-05-55</a></p>       
-              <p class="header-contacts__address" aria-label="Наш адрес город Санкт-Петербург, улица Большая Конюшенная, дом 19/8">г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8</p>
+              <p class="header-contacts__address" aria-hidden="true">г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8</p>
+              <p class="visually-hidden">Наш адрес город Санкт-Петербург, улица Большая Конюшенная, дом 19 дробь 8</p>
             </div>
             <nav class="header__user-navigation">
               <ul class="user-navigation">
-                <li class="user-navigation__item user-navigation__item--login"><a href="#" aria-label="Log in">Войти</a></li>
+                <li class="user-navigation__item user-navigation__item--login"><a href="#" aria-label="Войти под своим аккаунтом">Войти</a></li>
                 <li class="user-navigation__item"><a href="#" aria-label="">Регистрация</a></li>
               </ul>
             </nav>
@@ -55,14 +56,16 @@
         </div>
       </div>
     </header>
+    <div id="start-of-content" class="show-on-focus"></div>
     <main>
       <div class="container">
         <section class="main-features clearfix">
-          <h2 class="visually-hidden">Преимущества</h2>
+          <h2 class="visually-hidden">Наши преимущества</h2>
           <div class="feature feature--materials feature--new">
             <h3 class="feature__title">Материалы</h3>
+            <div class="ribbon ribbon--red" aria-hidden="true"><p>new</p></div>
+            <p class="visually-hidden">Новинка!</p>
             <a href="#" class="btn btn--transparent feature__btn" aria-label="Материалы">На любой вкус</a>
-            <div class="ribbon ribbon--red"><p>new</p></div>
           </div>
           <div class="feature feature--tools">
             <h3 class="feature__title">Инструмент</h3>
@@ -77,7 +80,7 @@
             <div class="slider">
                 <div class="slider-item slider-item-1 slider-item--active">
                   <div class="slider-item__heading">
-                    <h4 role="">Перфораторы</h4>
+                    <h4>Перфораторы</h4>
                     <p>Настоящие мужские игрушки</p>
                   </div>
                 </div>
@@ -90,8 +93,8 @@
               <button onclick="setPrevSlide()" class="slider__btn-prev" aria-label="Предыдущий слайд"></button>
               <button onclick="setNextSlide()" class="slider__btn-next" aria-label="Следующий слайд"></button>
               <div class="slider__dots">
-                <button class="slider__btn-dot" tabindex="-1" onclick="setSlideByIndex(1)"></button> 
-                <button class="slider__btn-dot" tabindex="-1" onclick="setSlideByIndex(2)"></button> 
+                <button class="slider__btn-dot" tabindex="-1" aria-hidden="true" onclick="setSlideByIndex(1)"></button> 
+                <button class="slider__btn-dot" tabindex="-1" aria-hidden="true" onclick="setSlideByIndex(2)"></button> 
               </div>
             </div>
             <a class="btn btn--red feature__btn feature__btn--for-slider" href="catalog.html">Открыть каталог</a>
@@ -114,51 +117,59 @@
             <li class="catalog-item">
               <h3 class="catalog-item__title">Перфоратор BOSCH BFG 9000</h3>
               <div class="catalog-item__image">
-                <img src="img/products/product1.png" width="210" height="145" alt="Фотография Перфоратор BOSCH BFG 9000">
+                <img src="img/products/product1.png" width="210" height="145" alt="Фотография Перфоратор BOSCH BFG 9000" aria-hidden="true">
               </div>
-              <ul class="catalog-item-actions"> 
+              <p class="label label--old-price catalog-item__old-price" aria-hidden="true">32500 Р.</p>
+              <p class="visually-hidden">Цена без скидки 32500 рублей</p>
+              <div class="label label--red label--arrow-right catalog-item__price" aria-hidden="true">25500 Р.</div>
+              <p class="visually-hidden">Цена со скидкой 25500 рублей</p>
+              <ul class="catalog-item-actions" role="command"> 
                 <li><a class="btn btn--buy catalog-item-actions__buy" href="#" aria-label="Купить Перфоратор BOSCH BFG 9000">Купить</a></li>
                 <li><a class="btn btn--bookmark catalog-item-actions__bookmark" href="#" aria-label="Добавить в закладки Перфоратор BOSCH BFG 9000">В закладки</a></li>
               </ul>
-              <p class="label label--old-price catalog-item__old-price" aria-label="Цена без скидки 32500 рублей">32500 Р.</p>
-              <div class="label label--red label--arrow-right catalog-item__price" aria-label="Цена со скидкой 25500 рублей">25500 Р.</div>
             </li>
             <li class="catalog-item">
               <h3 class="catalog-item__title">Перфоратор BOSCH BFG 3000</h3>
               <div class="catalog-item__image">
-                <img src="img/products/product2.png" width="210" height="145" alt="Фотография Перфоратор BOSCH BFG 3000">
+                <img src="img/products/product2.png" width="210" height="145" alt="Фотография Перфоратор BOSCH BFG 3000" aria-hidden="true">
               </div>
-              <ul class="catalog-item-actions">
-                <li><a class="btn btn--buy catalog-item-actions__buy" href="#">Купить</a></li>
-                <li><a class="btn btn--bookmark catalog-item-actions__bookmark" href="#">В закладки</a></li>
+              <p class="label label--old-price catalog-item__old-price" aria-hidden="true">22500 Р.</p>
+              <p class="visually-hidden">Цена без скидки 22500 рублей</p>
+              <div class="label label--red label--arrow-right catalog-item__price" aria-hidden="true">15500 Р.</div>
+              <p class="visually-hidden">Цена со скидкой 15500 рублей</p>
+              <ul class="catalog-item-actions" role="command">
+                <li><a class="btn btn--buy catalog-item-actions__buy" href="#" aria-label="Купить Перфоратор BOSCH BFG 3000">Купить</a></li>
+                <li><a class="btn btn--bookmark catalog-item-actions__bookmark" href="#" aria-label="Добавить в закладки Перфоратор BOSCH BFG 3000">В закладки</a></li>
               </ul>
-              <p class="label label--old-price catalog-item__old-price">22500 Р.</p>
-              <div class="label label--red label--arrow-right catalog-item__price">15500 Р.</div>
             </li>
             <li class="catalog-item">
               <h3 class="catalog-item__title">Перфоратор BOSCH BFG 6000</h3>
               <div class="catalog-item__image">
-                <img src="img/products/product3.png" width="210" height="145" alt="Фотография Перфоратор BOSCH BFG 6000">
+                <img src="img/products/product3.png" width="210" height="145" alt="Фотография Перфоратор BOSCH BFG 6000" aria-hidden="true">
               </div>
-              <ul class="catalog-item-actions">
-                <li><a class="btn btn--buy catalog-item-actions__buy" href="#">Купить</a></li>
-                <li><a class="btn btn--bookmark catalog-item-actions__bookmark" href="#">В закладки</a></li>
+              <p class="label label--old-price catalog-item__old-price" aria-hidden="true">30500 Р.</p>
+              <p class="visually-hidden">Цена без скидки 30500 рублей</p>
+              <div class="label label--red label--arrow-right catalog-item__price" aria-hidden="true">25500 Р.</div>
+              <p class="visually-hidden">Цена со скидкой 25500 рублей</p>
+              <ul class="catalog-item-actions" role="command">
+                <li><a class="btn btn--buy catalog-item-actions__buy" href="#" aria-label="Купить Перфоратор BOSCH BFG 6000">Купить</a></li>
+                <li><a class="btn btn--bookmark catalog-item-actions__bookmark" href="#" aria-label="Добавить в закладки Перфоратор BOSCH BFG 6000">В закладки</a></li>
               </ul>
-              <p class="label label--old-price catalog-item__old-price">30500 Р.</p>
-              <div class="label label--red label--arrow-right catalog-item__price">25500 Р.</div>
             </li>
           <li class="catalog-item">
               <h3 class="catalog-item__title">Перфоратор BOSCH BFG 2000</h3>
+              <div class="ribbon ribbon--red" aria-hidden="true"><p>new</p></div>
+              <p class="visually-hidden">Новинка!</p>
               <div class="catalog-item__image">
-                <img src="img/products/product4.png" width="210" height="145" alt="Фотография Перфоратор BOSCH BFG 2000">
+                <img src="img/products/product4.png" width="210" height="145" alt="Фотография Перфоратор BOSCH BFG 2000" aria-hidden="true">
               </div>
-              <ul class="catalog-item-actions">
-                <li><a class="btn btn--buy catalog-item-actions__buy" href="#">Купить</a></li>
-                <li><a class="btn btn--bookmark catalog-item-actions__bookmark" href="#">В закладки</a></li>
-              </ul>
               <p class="label label--old-price catalog-item__old-price"></p>
-              <div class="label label--red label--arrow-right catalog-item__price">12500 Р.</div>
-              <div class="ribbon ribbon--red"><p>new</p></div>
+              <div class="label label--red label--arrow-right catalog-item__price" aria-hidden="true">12500 Р.</div>
+              <p class="visually-hidden">Цена 12500 рублей</p>
+              <ul class="catalog-item-actions" role="command">
+                <li><a class="btn btn--buy catalog-item-actions__buy" href="#" aria-label="Купить Перфоратор BOSCH BFG 2000">Купить</a></li>
+                <li><a class="btn btn--bookmark catalog-item-actions__bookmark" href="#" aria-label="Добавить в закладки Перфоратор BOSCH BFG 2000">В закладки</a></li>
+              </ul>
             </li>
           </ul>
         </section>
@@ -171,49 +182,49 @@
             <li class="manufacturers-item">
               <h3 class="visually-hidden">Bosch</h3>
               <a href="catalog?manufacturer=Bosch">
-                <img class="manufacturers-item__image" src="img/manufacturers/bosch.png" width="218" height="143" alt="Bosch">
+                <img class="manufacturers-item__image" src="img/manufacturers/bosch.png" width="218" height="143" alt="Логотип Bosch">
               </a>
             </li>
             <li class="manufacturers-item">
               <h3 class="visually-hidden">Makita</h3>
               <a href="catalog?manufacturer=Makita">
-                <img class="manufacturers-item__image" src="img/manufacturers/makita.png" width="218" height="143" alt="Makita">
+                <img class="manufacturers-item__image" src="img/manufacturers/makita.png" width="218" height="143" alt="Логотип Makita">
               </a>
             </li>
             <li class="manufacturers-item">
               <h3 class="visually-hidden">DeWALT</h3>
               <a href="catalog?manufacturer=DeWALT">
-                <img class="manufacturers-item__image" src="img/manufacturers/dewalt.png" width="218" height="143" alt="DeWALT">
+                <img class="manufacturers-item__image" src="img/manufacturers/dewalt.png" width="218" height="143" alt="Логотип DeWALT">
               </a>
             </li>
             <li class="manufacturers-item">
               <h3 class="visually-hidden">Интерскол</h3>
               <a href="catalog?manufacturer=Interskol">
-                <img class="manufacturers-item__image" src="img/manufacturers/interskol.png" width="218" height="143" alt="Интерскол">
+                <img class="manufacturers-item__image" src="img/manufacturers/interskol.png" width="218" height="143" alt="Логотип Интерскол">
               </a>
             </li>
             <li class="manufacturers-item">
               <h3 class="visually-hidden">Hitachi</h3>
               <a href="catalog?manufacturer=Hitachi">
-                <img class="manufacturers-item__image" src="img/manufacturers/hitachi.png" width="218" height="143" alt="Hitachi">
+                <img class="manufacturers-item__image" src="img/manufacturers/hitachi.png" width="218" height="143" alt="Логотип Hitachi">
               </a>
             </li>
             <li class="manufacturers-item">
               <h3 class="visually-hidden">LG</h3>
               <a href="catalog?manufacturer=LG">
-                <img class="manufacturers-item__image" src="img/manufacturers/lg.png" width="218" height="143" alt="LG">
+                <img class="manufacturers-item__image" src="img/manufacturers/lg.png" width="218" height="143" alt="Логотип LG">
               </a>
             </li>
             <li class="manufacturers-item">
               <h3 class="visually-hidden">AEG</h3>
               <a href="catalog?manufacturer=AEG">
-                <img class="manufacturers-item__image" src="img/manufacturers/aeg.png" width="218" height="143" alt="AEG">
+                <img class="manufacturers-item__image" src="img/manufacturers/aeg.png" width="218" height="143" alt="Логотип AEG">
               </a>
             </li>
             <li class="manufacturers-item">
               <h3 class="visually-hidden">Metabo</h3>
               <a href="catalog?manufacturer=Metabo">
-                <img class="manufacturers-item__image" src="img/manufacturers/metabo.png" width="218" height="143" alt="Metabo">
+                <img class="manufacturers-item__image" src="img/manufacturers/metabo.png" width="218" height="143" alt="Логотип Metabo">
               </a>
             </li>
           </ul>
@@ -292,13 +303,8 @@
               заехав в наш офис:
             </p>
             <a class="map" href="#">
-              <img src="img/map-small.png" alt="Наш адрес: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" width="300" height="158">
+              <img src="img/map-small.png" alt="Наш адрес: город Санкт-Петербург, улица Большая Конюшенная, дом 19 дробь 8" width="300" height="158">
             </a>  
-            <div class="modal modal-map hidden">
-              <h2 class="visually-hidden">Как до нас добраться</h2>
-              <img src="/img/map-big.jpg" alt="Наш адрес: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
-              <button class="modal-close" aria-label="Закрыть модальное окно"></button>
-            </div>
             <a class="btn btn--red main-contacts__btn" href="#">Заблудились? Напишите нам!</a>
           </section>
         </div>
@@ -364,28 +370,34 @@
     <!-- Modal windows start -->
     <section class="modal modal-write-us hidden">
       <h2 class="visually-hidden">Напишите нам</h2>
-      <form action="post" action="https://echo.htmlacademy.ru">
-        <p>
+      <form method="post" action="https://echo.htmlacademy.ru">
+        <div>
+          <p class="hidden" id="write-us-name-description">Введите ваше имя в формате</p>
           <label for="write-us-name">Ваше имя:</label>
-          <input type="text" id="write-us-name" name="name" placeholder="Имя Фамилия">
-        </p>
-        <p>
+          <input type="text" id="write-us-name" aria-describedby="write-us-name-description" name="name" placeholder="Имя Фамилия" aria-required="true" required>
+        </div>
+        <div>
+          <p class="hidden" id="write-us-email-description">Введите адрес вашей электронной почты в формате</p>
           <label for="write-us-email">Ваш e-mail:</label>
-          <input type="text" id="write-us-email" name="email" placeholder="email@example.com">
-        </p>
-        <p>
+          <input type="text" id="write-us-email" aria-describedby="write-us-email-description" name="email" placeholder="email@example.com" aria-required="true" required>
+        </div>
+        <div>
+          <p class="hidden" id="write-us-text-description">Введите текст письма</p>
           <label for="write-us-text">Текст письма:</label>
-          <input type="text" id="write-us-text" name="text" placeholder="В свободной форме">
-        </p>
+          <input type="text" id="write-us-text" aria-describedby="write-us-text-description" name="text" placeholder="В свободной форме" aria-required="true" required>
+        </div>
         <button type="submit" class="button">Отправить</button>
       </form>
       <!-- Form placeholder -->
-      
       <button class="modal-close" aria-label="Закрыть модальное окно"></button>
     </section>
-    
+    <div class="modal modal-map hidden">
+      <h2 class="visually-hidden">Как до нас добраться</h2>
+      <img src="/img/map-big.jpg" alt="Наш адрес: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+      <button class="modal-close" aria-label="Закрыть модальное окно"></button>
+    </div>
     <!-- Modal windows end -->
+    <script src="js/slider.js"></script>
+    <script src="js/catalog-items.js"></script>
   </body>
-  <script src="js/slider.js"></script>
-  <script src="js/catalog-items.js"></script>
 </html>
