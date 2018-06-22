@@ -1,57 +1,33 @@
-// var catalogItems = document.getElementsByClassName('catalog-item');
-// for (var i = 0; i < catalogItems.length; i++) {
-//     var item = catalogItems[i];
-//     item.addEventListener("focusin", onCatalogItemFocus);
-//     item.addEventListener("focusout", onCatalogItemFocusOut);
-// }     
+// Подписка кнопок "Купить" на события focusin и focusout
+var buyButtons = document.getElementsByClassName('catalog-item-actions__buy');
+for (var i = 0; i < buyButtons.length; i++) {
+    var item = buyButtons[i];
+    item.addEventListener("focusin", onActionButtonFocus);
+    item.addEventListener("focusout", onActionButtonFocusOut);
+}  
+// Подписка кнопок "В закладки" на события focusin и focusout
+var bookmarkButtons = document.getElementsByClassName('catalog-item-actions__bookmark');
+for (var i = 0; i < bookmarkButtons.length; i++) {
+    var item = bookmarkButtons[i];
+    item.addEventListener("focusin", onActionButtonFocus);
+    item.addEventListener("focusout", onActionButtonFocusOut);
+}  
 
-// function onCatalogItemFocus(item) {
-//     console.log(item);
-//     console.log('1');
-    
-//     var actionsContainer = getFirstOrDefaultElementByClass(item.target, "catalog-item-actions");
-//     if(!actionsContainer) {
-//         console.log('e1');
-//         return;
-//     }
-//     hideOtherCatalogItemActions();
-//     console.log('2');
-//     if(item.relatedTarget.className == "btn btn--buy catalog-item-actions__buy") {
-//         console.log('e2');
-//         return;
-//     }
-//     actionsContainer.setAttribute("style", "display: block");
-//     console.log('3');
-//     var actionListItem = getFirstOrDefaultElement(actionsContainer);
-//     var actionHref = getFirstOrDefaultElement(actionListItem);
-//     console.log('4');
-//     actionHref.focus();
-//     console.log('5');
-//     console.log(actionHref);
-// }
-// function onCatalogItemFocusOut(item) {
-//     var actionsContainer = getFirstOrDefaultElementByClass(item.target, "catalog-item-actions");
-//     console.log(actionsContainer);
-// }
-
-// function hideOtherCatalogItemActions() {    
-//     var catalogItems2 = document.getElementsByClassName('catalog-item-actions');
-//     for (var i = 0; i < catalogItems2.length; i++) {
-//         var item = catalogItems2[i];
-//         item.removeAttribute("style", "");
-//     }  
-// }
-
-// function getFirstOrDefaultElementByClass(node, className) {
-//     var found = null;
-//     for (var i = 0; i < node.childNodes.length; i++) {
-//         if (node.childNodes[i].className == className) {
-//         var found = node.childNodes[i];
-//         break;
-//         }        
-//     }
-//     return found;
-// }
-// function getFirstOrDefaultElement(node) {
-//     return node.children[0];
-// }
+/**
+ * Обработчик события при focusin кнопки "Купить" или "В закладки"
+ *
+ * @param event - Радиус окружности.
+ */
+function onActionButtonFocus(event) {
+    var actionsContainer = event.target.parentNode.parentNode;
+    actionsContainer.setAttribute("style", "z-index: 12");
+}
+/**
+ * Обработчик события при focusout кнопки "Купить" или "В закладки"
+ *
+ * @param event - Радиус окружности.
+ */
+function onActionButtonFocusOut(event) {
+    var actionsContainer = event.target.parentNode.parentNode;
+    actionsContainer.removeAttribute("style");
+}
