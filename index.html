@@ -8,16 +8,17 @@
   </head>
   <body>
     <header class="header">
+      <a href="#start-of-content" tabindex="1" class="p-3 bg-blue text-white show-on-focus js-skip-to-content">Skip to content</a>
       <div class="header__top">
         <div class="container">
           <div class="row">
             <p class="logo header__logo">Техномарт</p>
             <form class="header__search-form">
-                <input type="search" placeholder="Поиск:">
+                <input type="search" placeholder="Поиск:" aria-label="Поиск по сайту">
             </form>
             <div class="header-buttons">
-              <a href="#" class="header__button header__button--bookmarks">Закладки: 0</a>
-              <a href="#" class="header__button header__button--cart">Корзина: 0</a>
+              <a href="#" class="header__button header__button--bookmarks" aria-label="Закладки">Закладки: 0</a>
+              <a href="#" class="header__button header__button--cart" aria-label="Корзина">Корзина: 0</a>
               <a href="#" class="header__button header__button--order">Оформить заказ</a>
             </div>
           </div>
@@ -28,21 +29,21 @@
           <div class="row">
             <h1 class="header__heading">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
             <div class="header-contacts">
-              <p class="header-contacts__phone">+7 (812) 555-05-55</p>
-              <p class="header-contacts__address">г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8</p>
+              <p class="header-contacts__phone"><a href="tel:+7(812)555-05-55" aria-label="Наш телефон +7 (812) 555-05-55">+7 (812) 555-05-55</a></p>       
+              <p class="header-contacts__address" aria-label="Наш адрес город Санкт-Петербург, улица Большая Конюшенная, дом 19/8">г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8</p>
             </div>
             <nav class="header__user-navigation">
               <ul class="user-navigation">
-                <li class="user-navigation__item user-navigation__item--login"><a href="#">Войти</a></li>
-                <li class="user-navigation__item"><a href="#">Регистрация</a></li>
+                <li class="user-navigation__item user-navigation__item--login"><a href="#" aria-label="Log in">Войти</a></li>
+                <li class="user-navigation__item"><a href="#" aria-label="">Регистрация</a></li>
               </ul>
             </nav>
           </div>
           <div class="row">
             <nav class="header__navigation">
               <ul class="header__site-navigation">
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="company.html">Компания</a></li>
+                <li><a href="index.html" aria-label="Главную страница">Главная </a></li>
+                <li><a href="company.html" aria-label="О Компании">Компания</a></li>
                 <li><a href="catalog.html">Каталог</a></li>
                 <li><a href="news.html">Новости</a></li>
                 <li><a href="special-offers.html">Спецпредложения</a></li>
@@ -60,48 +61,48 @@
           <h2 class="visually-hidden">Преимущества</h2>
           <div class="feature feature--materials feature--new">
             <h3 class="feature__title">Материалы</h3>
-            <a href="#" class="btn btn--transparent feature__btn">На любой вкус</a>
+            <a href="#" class="btn btn--transparent feature__btn" aria-label="Материалы">На любой вкус</a>
             <div class="ribbon ribbon--red"><p>new</p></div>
           </div>
           <div class="feature feature--tools">
             <h3 class="feature__title">Инструмент</h3>
-            <a href="#" class="btn btn--transparent feature__btn">На все случаи</a>
+            <a href="#" class="btn btn--transparent feature__btn" aria-label="Инструмент">На все случаи</a>
           </div>
           <div class="feature feature--tech">
             <h3 class="feature__title">Техника</h3>
-            <a href="#" class="btn btn--transparent feature__btn">Для стройки</a>
+            <a href="#" class="btn btn--transparent feature__btn" aria-label="Техника">Для стройки</a>
           </div>
           <div class="feature feature--slider">
+            <h3 class="visually-hidden">Каталог товаров</h3>
             <div class="slider">
                 <div class="slider-item slider-item-1 slider-item--active">
                   <div class="slider-item__heading">
-                    <h3>Перфораторы</h3>
+                    <h4 role="">Перфораторы</h4>
                     <p>Настоящие мужские игрушки</p>
                   </div>
                 </div>
               <div class="slider-item slider-item-2">
                 <div class="slider-item__heading">
-                  <h3>Дрели</h3>
+                  <h4>Дрели</h4>
                   <p>Соседям на радость</p>
                 </div>
               </div>
-              <button onclick="setPrevSlide()" class="slider__btn-prev"></button>
-              <button onclick="setNextSlide()" class="slider__btn-next"></button>
+              <button onclick="setPrevSlide()" class="slider__btn-prev" aria-label="Предыдущий слайд"></button>
+              <button onclick="setNextSlide()" class="slider__btn-next" aria-label="Следующий слайд"></button>
               <div class="slider__dots">
-                <button class="slider__btn-dot" onclick="setSlideByIndex(1)"></button> 
-                <button class="slider__btn-dot" onclick="setSlideByIndex(2)"></button> 
+                <button class="slider__btn-dot" tabindex="-1" onclick="setSlideByIndex(1)"></button> 
+                <button class="slider__btn-dot" tabindex="-1" onclick="setSlideByIndex(2)"></button> 
               </div>
             </div>
-            <h3 class="visually-hidden">Каталог товаров (слайдер)</h3>
             <a class="btn btn--red feature__btn feature__btn--for-slider" href="catalog.html">Открыть каталог</a>
             </div>
           <div class="feature feature--discounts">
             <h3 class="feature__title">Скидки 50%</h3>
-            <a href="#" class="btn btn--transparent feature__btn">На 350 товаров</a>
+            <a href="#" class="btn btn--transparent feature__btn" aria-label="Скидки">На 350 товаров</a>
           </div>
           <div class="feature feature--delivery">
             <h3 class="feature__title">Доставка</h3>
-            <a href="#" class="btn btn--transparent feature__btn">Бесплатно</a>
+            <a href="#" class="btn btn--transparent feature__btn" aria-label="Доставка">Бесплатно</a>
           </div>
         </section>
         <section class="main-popular-products">
@@ -113,19 +114,19 @@
             <li class="catalog-item">
               <h3 class="catalog-item__title">Перфоратор BOSCH BFG 9000</h3>
               <div class="catalog-item__image">
-                <img src="img/products/product1.png" width="210" height="145" alt="Перфоратор BOSCH BFG 9000">
+                <img src="img/products/product1.png" width="210" height="145" alt="Фотография Перфоратор BOSCH BFG 9000">
               </div>
-              <ul class="catalog-item-actions">
-                <li><a class="btn btn--buy catalog-item-actions__buy" href="#">Купить</a></li>
-                <li><a class="btn btn--bookmark catalog-item-actions__bookmark" href="#">В закладки</a></li>
+              <ul class="catalog-item-actions"> 
+                <li><a class="btn btn--buy catalog-item-actions__buy" href="#" aria-label="Купить Перфоратор BOSCH BFG 9000">Купить</a></li>
+                <li><a class="btn btn--bookmark catalog-item-actions__bookmark" href="#" aria-label="Добавить в закладки Перфоратор BOSCH BFG 9000">В закладки</a></li>
               </ul>
-              <p class="label label--old-price catalog-item__old-price">32500 Р.</p>
-              <div class="label label--red label--arrow-right catalog-item__price">25500 Р.</div>
+              <p class="label label--old-price catalog-item__old-price" aria-label="Цена без скидки 32500 рублей">32500 Р.</p>
+              <div class="label label--red label--arrow-right catalog-item__price" aria-label="Цена со скидкой 25500 рублей">25500 Р.</div>
             </li>
             <li class="catalog-item">
               <h3 class="catalog-item__title">Перфоратор BOSCH BFG 3000</h3>
               <div class="catalog-item__image">
-                <img src="img/products/product2.png" width="210" height="145" alt="Перфоратор BOSCH BFG 9000">
+                <img src="img/products/product2.png" width="210" height="145" alt="Фотография Перфоратор BOSCH BFG 3000">
               </div>
               <ul class="catalog-item-actions">
                 <li><a class="btn btn--buy catalog-item-actions__buy" href="#">Купить</a></li>
@@ -137,7 +138,7 @@
             <li class="catalog-item">
               <h3 class="catalog-item__title">Перфоратор BOSCH BFG 6000</h3>
               <div class="catalog-item__image">
-                <img src="img/products/product3.png" width="210" height="145" alt="Перфоратор BOSCH BFG 9000">
+                <img src="img/products/product3.png" width="210" height="145" alt="Фотография Перфоратор BOSCH BFG 6000">
               </div>
               <ul class="catalog-item-actions">
                 <li><a class="btn btn--buy catalog-item-actions__buy" href="#">Купить</a></li>
@@ -146,10 +147,10 @@
               <p class="label label--old-price catalog-item__old-price">30500 Р.</p>
               <div class="label label--red label--arrow-right catalog-item__price">25500 Р.</div>
             </li>
-            <li class="catalog-item">
+          <li class="catalog-item">
               <h3 class="catalog-item__title">Перфоратор BOSCH BFG 2000</h3>
               <div class="catalog-item__image">
-                <img src="img/products/product4.png" width="210" height="145" alt="Перфоратор BOSCH BFG 9000">
+                <img src="img/products/product4.png" width="210" height="145" alt="Фотография Перфоратор BOSCH BFG 2000">
               </div>
               <ul class="catalog-item-actions">
                 <li><a class="btn btn--buy catalog-item-actions__buy" href="#">Купить</a></li>
@@ -291,12 +292,12 @@
               заехав в наш офис:
             </p>
             <a class="map" href="#">
-              <img src="img/map-small.png" alt="Карта" width="300" height="158">
-            </a>
+              <img src="img/map-small.png" alt="Наш адрес: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" width="300" height="158">
+            </a>  
             <div class="modal modal-map hidden">
               <h2 class="visually-hidden">Как до нас добраться</h2>
-              <img src="/img/map-big.jpg" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
-              <button class="modal-close"></button>
+              <img src="/img/map-big.jpg" alt="Наш адрес: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+              <button class="modal-close" aria-label="Закрыть модальное окно"></button>
             </div>
             <a class="btn btn--red main-contacts__btn" href="#">Заблудились? Напишите нам!</a>
           </section>
@@ -321,7 +322,7 @@
           <div class="row row--align-top">
             <p class="footer__address">
               г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
-              +7 (812) 555-05-55          
+              <a href="tel:+7(812)555-05-55" aria-label="Наш телефон +7 (812) 555-05-55">+7 (812) 555-05-55</a>          
             </p>
             <nav>
               <ul class="footer__navigation footer__navigation--catalog-nav">
@@ -343,9 +344,9 @@
             </p>
             <div class="float-right">
               <ul class="footer__social-btns">
-                <li><a href="#" class="social-btn social-btn--vk"></a></li>
-                <li><a href="#" class="social-btn social-btn--fb"></a></li>
-                <li><a href="#" class="social-btn social-btn--instagram"></a></li>
+                <li><a href="#" class="social-btn social-btn--vk" aria-label="Вконтакте"></a></li>
+                <li><a href="#" class="social-btn social-btn--fb" aria-label="Фейсбук"></a></li>
+                <li><a href="#" class="social-btn social-btn--instagram" aria-label="Инстаграмм"></a></li>
               </ul>
               <p class="footer__bottom-text footer__feedback">
                 Обратная связь:<br>
@@ -363,12 +364,28 @@
     <!-- Modal windows start -->
     <section class="modal modal-write-us hidden">
       <h2 class="visually-hidden">Напишите нам</h2>
+      <form action="post" action="https://echo.htmlacademy.ru">
+        <p>
+          <label for="write-us-name">Ваше имя:</label>
+          <input type="text" id="write-us-name" name="name" placeholder="Имя Фамилия">
+        </p>
+        <p>
+          <label for="write-us-email">Ваш e-mail:</label>
+          <input type="text" id="write-us-email" name="email" placeholder="email@example.com">
+        </p>
+        <p>
+          <label for="write-us-text">Текст письма:</label>
+          <input type="text" id="write-us-text" name="text" placeholder="В свободной форме">
+        </p>
+        <button type="submit" class="button">Отправить</button>
+      </form>
       <!-- Form placeholder -->
-      <button type="button" class="button">Отправить</button>
-      <button class="modal-close">x</button>
+      
+      <button class="modal-close" aria-label="Закрыть модальное окно"></button>
     </section>
     
     <!-- Modal windows end -->
   </body>
   <script src="js/slider.js"></script>
+  <script src="js/catalog-items.js"></script>
 </html>
