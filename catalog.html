@@ -35,7 +35,6 @@
             </div>
             <nav class="header__user-navigation">
               <ul class="user-navigation ">
-                <!-- Всего один элемент в состоянии "Logged in". Если "выйти", то будет 2 элемента -->
                 <li class="user-navigation__item user-navigation__item--logged"><a href="#" aria-label="Профиль: Равшан Джамшутович">Равшан Джамшутович</a></li>
                 <li class="user-navigation__item user-navigation__item--logout"><a href="#" aria-label="Профиль: Выйти из профиля"></a></li>
               </ul>
@@ -76,54 +75,40 @@
           <div class="row">
             <div class="catalog__filter">
               <form class="catalog-filter" action="" method="get">
-                Фильтр
+                <h3>Фильтр:</h3>
                 <!-- Форма фильтрации -->
                 <fieldset>
-                  <legend>Цена</legend>
+                  <legend>Цена:</legend>
                   <p class="price-range">
                     <label for="filter-lowest-price" class="visually-hidden">Цена - нижняя граница диапазона</label>
                     <input type="text" id="filter-lowest-price" name="lowest-price" value="0">
+                    &ndash;
                     <label for="filter-highest-price" class="visually-hidden">Цена - верхняя граница диапазона</label>
                     <input type="text" id="filter-highest-price" name="highest-price" value="65536">
                   </p>
                 </fieldset>
                 <fieldset>
-                  <legend>Производители</legend>
+                  <legend>Производители:</legend>
                   <ul class="filter-list">
                     <li class="filter-list__option">
-                      <label class="checkbox">
-                        <input type="checkbox" name="manufacturer-bosch" class="visually-hidden">
-                        <div class="checkbox-indicator"></div>
-                        Bosch
-                      </label>
+                      <input type="checkbox" name="manufacturer-bosch" id="filter-manufacturer-bosch" class="visually-hidden filter-input-checkbox">
+                      <label for="filter-manufacturer-bosch">Bosch</label>
                     </li>
                     <li class="filter-list__option">
-                      <label class="checkbox">
-                        <input type="checkbox" name="manufacturer-interskol" class="visually-hidden">
-                        <div class="checkbox-indicator"></div>
-                        Интерскол
-                      </label>
+                      <input type="checkbox" name="manufacturer-interskol" id="filter-manufacturer-interskol" class="visually-hidden filter-input-checkbox">
+                      <label for="filter-manufacturer-interskol">Интерскол</label>
                     </li>
                     <li class="filter-list__option">
-                      <label class="checkbox">
-                        <input type="checkbox" name="manufacturer-makita" class="visually-hidden">
-                        <div class="checkbox-indicator"></div>
-                        Makita
-                      </label>
+                      <input type="checkbox" name="manufacturer-makita" id="filter-manufacturer-makita" class="visually-hidden filter-input-checkbox">
+                      <label for="filter-manufacturer-makita">Makita</label>
                     </li>
                     <li class="filter-list__option">
-                      <label class="checkbox">
-                        <input type="checkbox" name="manufacturer-dewalt" class="visually-hidden">
-                        <div class="checkbox-indicator"></div>
-                        Dewalt
-                      </label>
+                      <input type="checkbox" name="manufacturer-dewalt" id="filter-manufacturer-dewalt" class="visually-hidden filter-input-checkbox">
+                      <label for="filter-manufacturer-dewalt">Dewalt</label>
                     </li>
-                    <li class="filter-option">
-                      <label class="checkbox">
-                        <input type="checkbox" name="manufacturer-hitachi" class="visually-hidden">
-                        <div class="checkbox-indicator"></div>
-                        Hitachi
-                      </label>
+                    <li class="filter-list__option">
+                      <input type="checkbox" name="manufacturer-hitachi" id="filter-manufacturer-hitachi" class="visually-hidden filter-input-checkbox">
+                      <label for="filter-manufacturer-hitachi">Hitachi</label>
                     </li>
                   </ul>
                 </fieldset>
@@ -131,22 +116,16 @@
                   <legend>Питание</legend>
                   <ul class="filter-list">
                     <li class="filter-list__option">
-                      <label class="radio-button">
-                        <input type="radio" name="power-group" class="visually-hidden" value="battery">
-                        <div class="radio-button-indicator"></div>
-                        Аккумуляторные
-                      </label>
+                      <input type="radio" name="power-group" id="filter-power-group-battery" class="visually-hidden filter-input-radio" value="battery">
+                      <label for="filter-power-group-battery">Аккумуляторные</label>
                     </li>
                     <li class="filter-list__option">
-                      <label class="radio-button">
-                        <input type="radio" name="power-group" class="visually-hidden" value="network">
-                        <div class="radio-button-indicator"></div>
-                        Сетевые
-                      </label>
+                      <input type="radio" name="power-group" id="filter-power-group-network" class="visually-hidden filter-input-radio" value="network">
+                      <label for="filter-power-group-network">Сетевые</label>
                     </li>
                   </ul>
                 </fieldset>
-                <button type="submit">Показать</button>
+                <button type="submit" class="catalog-filter__submit">Показать</button>
               </form>
             </div>
             <div class="catalog__content">
