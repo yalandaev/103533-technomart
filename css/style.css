@@ -783,7 +783,7 @@
     padding: 0;
     display: flex;
     flex-direction: row;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     flex-wrap: wrap;
 }
 .catalog-item {
@@ -1006,12 +1006,7 @@
     z-index: 100;
 }
 
-/* Pagination */
-.pagination, .pagination__item {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-}
+
 
 /* Section */
 .words-about {
@@ -1377,3 +1372,50 @@
     transform: rotate(-45deg);
     left: 0;
 }
+
+/* Pagionation */
+/* Pagination */
+.pagination, .pagination__item {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+.pagination {
+    font-family: "PTSans";
+    font-size: 14px;
+    margin-bottom: 60px;
+}
+.pagination__item {
+    margin-right: 10px;
+}
+.pagination__item a {
+    display: inline-block;
+    height: 38px;
+    min-width: 38px;
+    border: 1px #e5e5e5 solid;
+    border-radius: 3px;
+    line-height: 38px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
+.pagination__item a:focus,
+.pagination__item a:hover {
+    border: 1px #bdc6ca solid;
+}
+.pagination__item a:active {
+    border: 1px #ee3643 solid;
+}
+
+.pagination__item--active a:hover,
+.pagination__item--active a {
+    background-color: #ee3643;
+    border: 1px #ee3643 solid;
+    color: white;
+}
+.pagination__item--text a {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
