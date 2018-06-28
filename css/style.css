@@ -1023,7 +1023,7 @@
 .main-services {
     padding-bottom: 20px;
 }
-.tab-panel {
+.main-services__tab-panel {
     display: flex;
     flex-direction: row;
 }

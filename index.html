@@ -237,18 +237,16 @@
               Хороший интернет-магазин отличается от плохого не только ценами!
               Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
             </p>
-            <!-- Очень большие сомнения, как нужно разметить этот tab-panel -->
-            <div class="tab-panel tab-panel--vertical main-services__tab-panel">
-              <div class="tabs-container main-services__tabs-container">
-                <ul class="tabs main-services__tabs">
-                  <!-- Давать кнопкам классы, или достаточно того, что классы есть у li? -->
-                  <li class="tab main-services__tab"><button onclick="setServiceByIndex(1)">Доставка</button></li>
-                  <li class="tab main-services__tab"><button onclick="setServiceByIndex(2)">Гарантия</button></li>
-                  <li class="tab main-services__tab"><button onclick="setServiceByIndex(3)">Кредит</button></li>
+            <div class="main-services__tab-panel">
+              <div class="main-services__tabs-container">
+                <ul class="main-services__tabs">
+                  <li class="main-services__tab"><button onclick="setServiceByIndex(1)">Доставка</button></li>
+                  <li class="main-services__tab"><button onclick="setServiceByIndex(2)">Гарантия</button></li>
+                  <li class="main-services__tab"><button onclick="setServiceByIndex(3)">Кредит</button></li>
                 </ul>
               </div>
-              <div class="tabs-content main-services__tabs-content ">
-                <div id="main-services__service-delivery" class="tab-content service-item service-item--delivery">
+              <div class="main-services__tabs-content ">
+                <div id="main-services__service-delivery" class="service-item service-item--delivery">
                   <h3 class="service-item__title">Доставка</h3>
                   <p class="service-item__description">
                     Мы с удовольствием доставим ваш товар прямо
@@ -258,7 +256,7 @@
                     поднимая его на ваш этаж!
                   </p>
                 </div>
-                <div id="main-services__service-guarantee" class="tab-content service-item service-item--guarantee">
+                <div id="main-services__service-guarantee" class="service-item service-item--guarantee">
                   <h3 class="service-item__title">Гарантия</h3>
                   <p class="service-item__description">
                     Если купленный у нас товар поломается или заискрит, 
@@ -266,7 +264,7 @@
                     Дом уж восстановите как-нибудь сами.
                   </p>
                 </div>
-                <div id="main-services__service-credit" class="tab-content service-item service-item--credit">
+                <div id="main-services__service-credit" class="service-item service-item--credit">
                   <h3 class="service-item__title">Кредит</h3>
                   <p class="service-item__description">
                     Залезть в долговую яму стало проще! 
