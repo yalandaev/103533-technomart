@@ -237,6 +237,7 @@
     color: white;
     font-weight: bold;
     position: relative;
+    margin: 0;
 }
 .label--old-price {
     text-decoration: line-through;
@@ -1021,6 +1022,107 @@
 }
 .main-services {
     padding-bottom: 20px;
+}
+.tab-panel {
+    display: flex;
+    flex-direction: row;
+}
+.main-services__tabs-container {
+    margin-top: 50px;
+}
+.main-services__tabs {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.main-services__tabs::after {
+    content: '';
+    height: 230px;
+    width: 40px;
+    display: block;
+    position: absolute;
+    top: -25px;
+    right: -52px;
+    border-radius: 15px;
+    box-shadow: -8px 0px 20px 0px;
+}
+.main-services__tab {
+    display: block;
+}
+.main-services__tab button {
+    color: white;
+    font-size: 21px;
+    font-family: "Cuprum";
+    width: 240px;
+    height: 60px;
+    background-color: #32425c;
+    outline: none;
+    border: 0px;
+    border-top: 1px #4e637c solid;
+}
+.main-services__tab--active button {
+    color: #32425c;
+    background-color: white;
+    border-top: 1px white solid;
+}
+.main-services__tabs-content {
+    padding-left: 80px;
+    padding-top: 50px;
+    position: relative;
+    background-color: #f4f8f9;
+    width: 700px;
+    min-height: 320px;
+}
+/* .main-services__tabs-content::before {
+    box-shadow: -8px 0px 20px 0px;
+    content: '';
+    width: 100px;
+    height: 185px;
+    display: block;
+    position: absolute;
+    border-radius: 15px;
+} */
+
+.service-item__title {
+    font-size: 36px;
+    font-family: "Cuprum";
+    text-transform: uppercase;
+    color: #32425c;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+}
+.main-services__description,
+.service-item__description {
+    font-size: 13px;
+    font-family: "PTSans";
+    width: 280px;
+    margin: 0;
+    line-height: 25px;
+}
+.main-services__description {
+    width: 410px;
+    margin-bottom: 20px;
+}
+.service-item {
+    display: none;
+    height: 100%;
+}
+.service-item--active {
+    display: block;
+}
+.service-item--delivery {
+    background: url(../img/delivery.png) no-repeat;
+    background-position: right center;
+}
+.service-item--guarantee {
+    background: url(../img/guarantie.png) no-repeat;
+    background-position: right center;
+}
+.service-item--credit {
+    background: url(../img/credit.png) no-repeat;
+    background-position: right center;
 }
 /* Section - Company */
 .main-company__description {
