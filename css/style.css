@@ -422,6 +422,9 @@
 .header__button--cart {
     background: url(../img/icon-cart.svg) 9px 10px no-repeat;
 }
+.header__button--cart-not-empty {
+    background-color: #ee3643;
+}
 
 /* Header search form */
 .header__search-form {
@@ -497,6 +500,10 @@
     margin: 0;
     background: url(../img/icon-phone.svg) 15px 10px no-repeat;
 }
+.header-contacts__phone a {
+    color: #ee3643;
+    text-decoration: none;
+}
 .header-contacts__address {
     font-family: "Cuprum";
     color: #32425c;
@@ -547,6 +554,29 @@
 }
 .user-navigation__item--logout {
     min-width: 40px;
+}
+
+.user-sub-navigation {
+    font-family: "Cuprum";
+    font-size: 16px;
+    list-style: none;
+}
+.user-sub-navigation li {
+    display: inline-block;
+}
+.user-sub-navigation a {
+    color: #32425c;
+}
+.user-sub-navigation li:not(:last-child)::after {
+    display: inline-block;
+    content: '';
+    width: 4px;
+    height: 4px;
+    background: #32425c;
+    border-radius: 2px;
+    margin-left: 15px;
+    margin-right: 15px;
+    vertical-align: middle;
 }
 
 /* Header site navigation */
@@ -1059,12 +1089,21 @@
     background-color: #32425c;
     outline: none;
     border: 0px;
-    border-top: 1px #4e637c solid;
+    border-top: 1px #405069 solid;
+    border-bottom: 1px #293449 solid;
+    cursor: pointer;
 }
+.main-services__tab button:focus,
+.main-services__tab button:hover {
+    background-color: #293449;
+}
+.main-services__tab--active button:hover,
+.main-services__tab--active button:focus,
 .main-services__tab--active button {
     color: #32425c;
     background-color: white;
     border-top: 1px white solid;
+    border-bottom: 1px white solid;
 }
 .main-services__tabs-content {
     padding-left: 80px;
@@ -1301,4 +1340,40 @@
 }
 .footer__feedback {
     margin-right: 50px;
+}
+/* Breadcrumbs */
+.header {
+    margin-bottom: 20px;
+}
+.breadcrumbs {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: "PTSans";
+    text-transform: uppercase;
+    font-size: 13px;
+    background: url(../img/icon-home.svg) no-repeat;
+    margin-bottom: 20px;
+    padding-left: 30px;
+}
+.breadcrumbs a {
+    text-decoration: none;
+    color: black;
+}
+.breadcrumbs li {
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+    padding-right: 10px;
+}
+.breadcrumbs li::before {
+    display: block;
+    position: absolute;
+    content: '';
+    height: 10px;
+    width: 10px;
+    border-right: 1px #c5c9d1 solid;
+    border-bottom: 1px #c5c9d1 solid;
+    transform: rotate(-45deg);
+    left: 0;
 }
