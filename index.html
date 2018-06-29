@@ -378,7 +378,7 @@
       </div>
     </footer>
     <!-- Modal windows start -->
-    <section class="modal modal-write-us hidden">
+    <section class="modal modal-write-us">
       <h2 class="visually-hidden">Напишите нам</h2>
       <form class="form" method="GET" action="https://echo.htmlacademy.ru">
         <div class="modal-container">
@@ -391,7 +391,7 @@
             <div>
               <p class="hidden" id="write-us-email-description">Введите адрес вашей электронной почты в формате</p>
               <label for="write-us-email">Ваш e-mail:</label>
-              <input type="text" id="write-us-email" aria-describedby="write-us-email-description" name="email" placeholder="email@example.com" aria-required="true" required>
+              <input type="email" id="write-us-email" aria-describedby="write-us-email-description" name="email" placeholder="email@example.com" aria-required="true" required>
             </div>
           </div>
           <div>
@@ -408,13 +408,14 @@
       </form>
       <button type="button" class="modal-close" aria-label="Закрыть модальное окно"></button>
     </section>
-    <div class="modal modal-map hidden">
+    <div class="modal modal-map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
       <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Affe00937086a2042753c54f59e2394607fb21738c7d883307552d54670de69a1&amp;source=constructor" width="940" height="446" frameborder="0"></iframe>
       <img src="/img/map-big.jpg" alt="Наш адрес: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
       <button type="button" class="modal-close" aria-label="Закрыть модальное окно"></button>
     </div>
     <!-- Modal windows end -->
+    <script src="js/index.js"></script>
     <script src="js/slider-catalog.js"></script>
     <script src="js/slider-services.js"></script>
     <script src="js/catalog-items.js"></script>

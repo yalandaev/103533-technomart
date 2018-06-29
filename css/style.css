@@ -41,6 +41,24 @@
     font-weight: bold;
     font-style: normal;
 }
+/* Animations */
+@keyframes bounce {
+    0% {
+      transform: translateY(-2000px);
+    }
+  
+    70% {
+      transform: translateY(30px);
+    }
+  
+    90% {
+      transform: translateY(-10px);
+    }
+  
+    100% {
+      transform: translateY(0);
+    }
+  }
 
 /* Common layout classes start */
 .clearfix:after{
@@ -104,6 +122,11 @@
     box-shadow: black 0 0 20px 0px;
     border-top: 7px #ee3643 solid;
     z-index: 100;
+    display: none;
+}
+.modal-show {
+    display: block;
+    animation: bounce 0.6s;
 }
 .modal-close {
     background: url(../img/icon-close.svg) no-repeat;
@@ -155,7 +178,6 @@
 .bg-blue {
     background-color: #0366d6;
 }
-
 /* Common style classes */
 .logo {
     color: white;
@@ -1709,6 +1731,7 @@
       margin-bottom: 5px;
   }
   .form textarea,
+  .form input[type=email],
   .form input[type=text] {
     padding: 10px;
     border: 2px #dee3e4 solid;
