@@ -214,11 +214,25 @@
     background-color: #518534;
 }
 .btn-sort {
-    width: 10px;
-    height: 10px;
-    background: red;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 5px 10px 5px;
+    border-color: transparent transparent #c5c5c5 transparent;
     display: inline-block;
+    fill: #c5c5c5;
 }
+.btn-sort:hover {
+    border-color: transparent transparent #231f20 transparent;
+}
+.btn-sort--active,
+.btn-sort--active:hover {
+    border-color: transparent transparent #ee3643 transparent;
+}
+.btn-sort--desc {
+    transform: rotate(180deg);
+}
+
 /* Labels */
 .label {
     height: 38px;
@@ -877,21 +891,56 @@
     margin-right: 20px;
     font-family: "PTSans";
 }
+/* Sort panel */
 .sort-panel {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    background: #f7f3ec;
+    font-family: "PTSans";
+    text-transform: uppercase;
+    font-size: 14px;
+    align-items: center;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    padding-right: 17px;
 }
 .sort-options {
     display: inline-block;
+    margin: 0;
 }
 .sort-options__option {
     display: inline-block;
+    padding-right: 70px;
 }
-
+.sort-options__btn {
+    margin-right: 20px;
+}
+.sort-options__btn:last-child {
+    margin-right: 0px;
+}
+.sort-options__option a {
+    color: #c4c1bb;
+    border-bottom: 1px dotted #ee3643;
+    text-decoration: none;
+}
+.sort-options__option:last-child {
+    padding-right: 45px;
+}
+.sort-options__option a:hover {
+    color: black;
+    border-bottom: 1px solid #ee3643;
+    text-decoration: none;
+}
+.sort-options__option--active a,
+.sort-options__option--active a:hover {
+    color: #ee3643;
+    border-bottom: 0px;
+}
 .catalog__filter legend {
     text-transform: uppercase;
-    font-weight: bold;margin-bottom: 23px;
+    font-weight: bold;
+    margin-bottom: 23px;
 }
 .price-range {
     display: flex;
@@ -900,6 +949,7 @@
     line-height: 38px;
     margin: 0;
 }
+.sort-panel h3,
 .catalog__filter h3 {
     background: #f7f3ec;
     line-height: 38px;
@@ -909,6 +959,8 @@
     text-transform: uppercase;
     font-size: 14px;
     border-radius: 3px;
+}
+.catalog__filter h3 {
     margin-bottom: 20px;
 }
 .catalog__filter input[type="text"] {
@@ -994,8 +1046,6 @@
     cursor: pointer;
     font-size: 14px;
 }
-
-
 .modal-product-added {
     position: fixed;
     width: 620px;
@@ -1005,8 +1055,6 @@
     background: white;
     z-index: 100;
 }
-
-
 
 /* Section */
 .words-about {
@@ -1108,16 +1156,6 @@
     width: 700px;
     min-height: 320px;
 }
-/* .main-services__tabs-content::before {
-    box-shadow: -8px 0px 20px 0px;
-    content: '';
-    width: 100px;
-    height: 185px;
-    display: block;
-    position: absolute;
-    border-radius: 15px;
-} */
-
 .service-item__title {
     font-size: 36px;
     font-family: "Cuprum";
