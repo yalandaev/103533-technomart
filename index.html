@@ -380,29 +380,37 @@
     <!-- Modal windows start -->
     <section class="modal modal-write-us hidden">
       <h2 class="visually-hidden">Напишите нам</h2>
-      <form method="post" action="https://echo.htmlacademy.ru">
-        <div>
-          <p class="hidden" id="write-us-name-description">Введите ваше имя в формате</p>
-          <label for="write-us-name">Ваше имя:</label>
-          <input type="text" id="write-us-name" aria-describedby="write-us-name-description" name="name" placeholder="Имя Фамилия" aria-required="true" required>
+      <form class="form" method="GET" action="https://echo.htmlacademy.ru">
+        <div class="modal-container">
+          <div class="row">
+            <div>
+              <p class="hidden" id="write-us-name-description">Введите ваше имя в формате</p>
+              <label for="write-us-name">Ваше имя:</label>
+              <input type="text" id="write-us-name" aria-describedby="write-us-name-description" name="name" placeholder="Имя Фамилия" aria-required="true" required>
+            </div>
+            <div>
+              <p class="hidden" id="write-us-email-description">Введите адрес вашей электронной почты в формате</p>
+              <label for="write-us-email">Ваш e-mail:</label>
+              <input type="text" id="write-us-email" aria-describedby="write-us-email-description" name="email" placeholder="email@example.com" aria-required="true" required>
+            </div>
+          </div>
+          <div>
+            <p class="hidden" id="write-us-text-description">Введите текст письма</p>
+            <label for="write-us-text">Текст письма:</label>
+            <textarea id="write-us-text" aria-describedby="write-us-text-description" name="text" placeholder="В свободной форме" aria-required="true" required></textarea>
+          </div>
         </div>
-        <div>
-          <p class="hidden" id="write-us-email-description">Введите адрес вашей электронной почты в формате</p>
-          <label for="write-us-email">Ваш e-mail:</label>
-          <input type="text" id="write-us-email" aria-describedby="write-us-email-description" name="email" placeholder="email@example.com" aria-required="true" required>
+        <div class="modal-buttons-panel">
+          <div class="modal-container">
+            <button type="submit" class="button btn btn--red btn--write-us">Отправить</button>
+          </div>
         </div>
-        <div>
-          <p class="hidden" id="write-us-text-description">Введите текст письма</p>
-          <label for="write-us-text">Текст письма:</label>
-          <input type="text" id="write-us-text" aria-describedby="write-us-text-description" name="text" placeholder="В свободной форме" aria-required="true" required>
-        </div>
-        <button type="submit" class="button">Отправить</button>
       </form>
-      <!-- Form placeholder -->
       <button type="button" class="modal-close" aria-label="Закрыть модальное окно"></button>
     </section>
     <div class="modal modal-map hidden">
       <h2 class="visually-hidden">Как до нас добраться</h2>
+      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Affe00937086a2042753c54f59e2394607fb21738c7d883307552d54670de69a1&amp;source=constructor" width="940" height="446" frameborder="0"></iframe>
       <img src="/img/map-big.jpg" alt="Наш адрес: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
       <button type="button" class="modal-close" aria-label="Закрыть модальное окно"></button>
     </div>

@@ -55,6 +55,13 @@
     margin-top: 0;
     margin-bottom: 0;
 }
+.modal-container {
+    width: 460px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+}
 .container-column {
     display: flex;
     flex-direction: column;
@@ -95,6 +102,8 @@
 .modal {
     position: fixed;
     box-shadow: black 0 0 20px 0px;
+    border-top: 7px #ee3643 solid;
+    z-index: 100;
 }
 .modal-close {
     background: url(../img/icon-close.svg) no-repeat;
@@ -106,7 +115,25 @@
     cursor: pointer;
     border: 0;
 }
-
+.modal-buttons-panel {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding-top: 37px;
+    padding-bottom: 37px;
+    margin-top: 25px;
+}
+.modal-message {
+    font-family: "Cuprum";
+    text-align: center;
+    font-size: 28px;
+    line-height: 30px;
+    background: url(../img/success.png) 100px 50px no-repeat;
+    padding-top: 65px;
+    padding-bottom: 45px;
+    padding-left: 70px;
+    display: block;
+    margin: 0;
+}
 .show-on-focus {
     position: absolute;
     width: 1px;
@@ -168,6 +195,8 @@
     color: white;
     box-sizing: border-box;
     outline: none;
+    border: 0;
+    cursor: pointer;
 }
 .btn--transparent {
     background: rgba(0, 0, 0, 0.1);
@@ -188,6 +217,17 @@
 }
 .btn--red:active {
     background: #ba2732;
+}
+.btn--white {
+    background-color: rgba(255, 255, 255, 1);
+    color: black;
+}
+.btn--white:focus,
+.btn--white:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+.btn--white:active {
+    background-color: rgba(255, 255, 255, 1);
 }
 .btn--bookmark {
     border: 3px solid #63a63e;
@@ -1152,9 +1192,16 @@
     margin-left: -320px;
     top: 150px;
     background: white;
-    z-index: 100;
 }
-
+.modal-product-added__order {
+    padding-left: 59px;
+    padding-right: 61px;
+    margin-right: 20px;
+}
+.modal-product-added_continue {
+    padding-left: 44px;
+    padding-right: 48px;
+}
 /* Section */
 .words-about {
     padding-bottom: 63px;
@@ -1359,6 +1406,12 @@
     margin-left: -470px;
     top: 150px;
 }
+.modal-map img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
 .modal-write-us {
     position: fixed;
     width: 620px;
@@ -1367,6 +1420,10 @@
     top: 150px;
     background: white;
     z-index: 100;
+    padding-top: 50px;
+}
+.btn--write-us {
+    width: 100%;
 }
 .main-contacts__btn {
     margin-top: auto;
@@ -1640,4 +1697,28 @@
   
   .range-toggle-max {
     left: calc(80% - 16px);
+  }
+
+  /* Text inputs */
+  .form {
+    font-family: "Cuprum";
+  }
+  .form label {
+      display: block;
+      font-size: 20px;
+      margin-bottom: 5px;
+  }
+  .form textarea,
+  .form input[type=text] {
+    padding: 10px;
+    border: 2px #dee3e4 solid;
+    border-radius: 3px;
+    resize: none;
+    width: 100%;
+    min-width: 220px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+  }
+  .form textarea {
+      min-height: 115px;
   }
