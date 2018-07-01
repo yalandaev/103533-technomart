@@ -956,14 +956,14 @@ body {
 }
 .slider-item {
     display: none;
-    width: 640px;
-    height: 265px;
+    width: 620px;
+    height: 266px;
 }
 .slider-item-1 {
-    background: url(../img/slider-1.jpg) no-repeat;
+    background: #9e766c url(../img/slider-1.jpg) no-repeat;
 }
 .slider-item-2 {
-    background: url(../img/slider-2.jpg) no-repeat;
+    background: #9a9491 url(../img/slider-2.jpg) no-repeat;
 }
 .slider-item--active {
     display: block;
@@ -1525,15 +1525,15 @@ body {
     display: block;
 }
 .service-item--delivery {
-    background: url(../img/delivery.png) no-repeat;
+    background: #f4f8f9 url(../img/delivery.png) no-repeat;
     background-position: 151px 20px;
 }
 .service-item--guarantee {
-    background: url(../img/guarantie.png) no-repeat;
+    background: #f4f8f9 url(../img/guarantie.png) no-repeat;
     background-position: 200px 20px;
 }
 .service-item--credit {
-    background: url(../img/credit.png) no-repeat;
+    background: #f4f8f9 url(../img/credit.png) no-repeat;
     background-position: 151px 20px;
 }
 .service-item__btn {
