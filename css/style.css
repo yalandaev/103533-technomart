@@ -1595,6 +1595,7 @@ body {
     left: 50%;
     margin-left: -470px;
     top: 150px;
+    background-color: #f4f2ed;
 }
 .modal-map img {
     position: absolute;
