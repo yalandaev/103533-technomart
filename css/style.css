@@ -1434,6 +1434,11 @@
     top: 0;
     z-index: -1;
 }
+.modal-map iframe {
+    border: 0;
+    width: 940px;
+    height:446px;
+}
 .modal-write-us {
     position: fixed;
     width: 620px;
