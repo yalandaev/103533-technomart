@@ -515,7 +515,6 @@ body {
     background: #293449;
 }
 .header__bottom {
-    height: 278px;
     background: #f4f7f9;
     padding-top: 46px;
     padding-bottom: 65px;
@@ -703,6 +702,7 @@ body {
     margin-left: 53px;
     margin-top: 3px;
     line-height: 23px;
+    margin-bottom: 40px;
 }
 
 /* Header contacts block */
@@ -711,6 +711,7 @@ body {
     display: inline-block;
     vertical-align: top;
     margin-right: auto;
+    margin-bottom: 40px;
 }
 .header-contacts__phone {
     color: #ee3643;
@@ -756,6 +757,7 @@ body {
     display: inline-block;
     line-height: 45px;
     font-size: 21px;
+    margin-bottom: 10px;
 }
 .user-navigation__item a {
     color: black;
@@ -784,7 +786,7 @@ body {
 }
 .user-navigation__item--logged span,
 .user-navigation__item--login span {
-    padding-left: 21px;
+    padding-left: 23px;
 }
 .user-navigation__item--logged svg,
 .user-navigation__item--login svg {
@@ -1143,6 +1145,7 @@ body {
     text-align: center;
     margin: 0;
     width: 160px;
+    overflow: hidden;
 }
 .catalog-item__old-price {
     -webkit-box-ordinal-group: 3;
@@ -1154,6 +1157,8 @@ body {
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
+    width: 70px;
+    margin-left: 10px;
 }
 .catalog-item-actions {
     position: absolute;
