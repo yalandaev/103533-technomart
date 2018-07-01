@@ -65,8 +65,14 @@ body {
     font-family: "Cuprum", Arial, sans-serif;
     color: black;   
     background-color: white;
-  }
+}
 /* Common layout classes start */
+.skip-to-content {
+    color: white;
+    background-color: blue;
+    display: inline-block;
+    padding: 10px;
+}
 .clearfix:after{
     content: '';
     clear: both;
@@ -152,7 +158,6 @@ body {
     margin-top: 25px;
 }
 .modal-message {
-    
     text-align: center;
     font-size: 28px;
     line-height: 30px;
@@ -176,13 +181,6 @@ body {
     width: auto;
     height: auto;
     clip: auto;
-}
-
-.text-white {
-    color: #fff;
-}
-.bg-blue {
-    background-color: #0366d6;
 }
 /* Common style classes */
 .logo {
@@ -209,7 +207,6 @@ body {
 .btn {
     height: 38px;
     line-height: 38px;
-    
     font-size: 14px;
     display: inline-block;
     text-decoration: inherit;
@@ -366,7 +363,6 @@ body {
     padding: 5px 30px;
     line-height: 27px;
     position: relative;
-    /* cursor: default; */
 }
 .ribbon--red p {
     background: #ee3643;
@@ -403,7 +399,6 @@ body {
 }
 .section-title {
     color: black;
-    
     font-size: 30px;
     text-transform: uppercase;
     display: inline-block;
@@ -472,7 +467,6 @@ body {
 }
 .header__button {
     color: rgba(255, 255, 255, 1);
-    
     line-height: 42px;
     font-size: 17px;
     text-align: center;
@@ -599,7 +593,6 @@ body {
 /* Header bottom block */
 .header__heading {
     color: #ee3643;
-    
     font-size: 15px;
     font-style: italic;
     margin: 0;
@@ -619,7 +612,6 @@ body {
     margin-right: auto;
 }
 .header-contacts__phone {
-    
     color: #ee3643;
     font-size: 21px;
     height: 45px;
@@ -637,7 +629,6 @@ body {
     text-decoration: none;
 }
 .header-contacts__address {
-    
     color: #32425c;
     font-size: 14px;
     text-align: center;
@@ -660,7 +651,6 @@ body {
     margin: 0;
     display: inline-block;
     line-height: 45px;
-    
     font-size: 21px;
 }
 .user-navigation__item a {
@@ -716,8 +706,6 @@ body {
 .user-navigation__item--logged:not(:last-child) {
     margin-right: -4px;
 }
-
-
 .user-navigation__item--logged {
     width: 255px;
     max-width: 255px;
@@ -725,9 +713,7 @@ body {
 .user-navigation__item--logout {
     min-width: 45px;
 }
-
 .user-sub-navigation {
-    
     font-size: 16px;
     list-style: none;
     margin-top: 8px;
@@ -767,7 +753,6 @@ body {
 }
 .header__site-navigation li {
     display: inline-block;
-    
     font-size: 17px;
     text-align: left;
     line-height: 55px;
@@ -832,7 +817,6 @@ body {
     background: url(../img/icon-5.svg) #ffc047 191px 32px no-repeat;
 }
 .feature__title {
-    
     font-weight: bold;
     font-size: 24px;
     color: white;
@@ -872,7 +856,6 @@ body {
 }
 .slider-item__heading {
     position: absolute;
-    
     color: white;
 }
 .slider-item__heading h4 {
@@ -981,7 +964,6 @@ body {
 }
 .catalog-item:focus>.catalog-item-actions,
 .catalog-item:hover>.catalog-item-actions {
-    /* display: block; */
     z-index: 12;
 }
 /* Default case - full page width (4 items per row) */
@@ -1003,7 +985,6 @@ body {
 .catalog-item__image img {
     width: 218px;
     height: 143px;
-    
 }
 .catalog-item__title {
     order: 1;
@@ -1022,7 +1003,6 @@ body {
 .catalog-item__price {
     order: 3;
 }
-
 .catalog-item-actions {
     position: absolute;
     top: 5px;
@@ -1143,7 +1123,6 @@ body {
 .catalog__filter fieldset:last-of-type {
     border-bottom: 0px;
 }
-
 .filter-list {
     list-style: none;
     padding: 0;
@@ -1299,7 +1278,6 @@ body {
 .main-services__tab button {
     color: white;
     font-size: 21px;
-    
     width: 240px;
     height: 60px;
     background-color: #32425c;
@@ -1335,7 +1313,6 @@ body {
 }
 .service-item__title {
     font-size: 36px;
-    
     text-transform: uppercase;
     color: #32425c;
     margin: 0;
@@ -1396,7 +1373,6 @@ body {
 }
 .main-company__cargo-companies li {
     list-style: none;
-    
     font-size: 18px;
     padding-bottom: 20px;
 }
@@ -1458,9 +1434,6 @@ body {
 }
 
 /* Footer */
-.footer {
-    /* margin-top: 86px; */
-}
 .footer-top {
     background: #32425c;
     height: 193px;
@@ -1483,7 +1456,6 @@ body {
 }
 .footer__navigation li {
     display: inline-block;
-    
     font-size: 18px;
     text-align: left;
     vertical-align: middle;
@@ -1523,7 +1495,6 @@ body {
     color: rgba(255, 209, 128, 0.5);
 }
 .footer__address {
-    
     font-size: 18px;
     color: white;
     margin-top: 34px;
@@ -1534,7 +1505,6 @@ body {
     text-decoration: none;
 }
 .footer__bottom-text {
-    
     font-size: 16px;
     color: white;
     margin-top: 37px;
@@ -1627,7 +1597,6 @@ body {
     top: 4px;
 }
 
-/* Pagionation */
 /* Pagination */
 .pagination, .pagination__item {
     display: inline-block;
@@ -1661,7 +1630,6 @@ body {
 .pagination__item a:active {
     border: 1px #ee3643 solid;
 }
-
 .pagination__item--active a:hover,
 .pagination__item--active a {
     background-color: #ee3643;
@@ -1690,20 +1658,17 @@ body {
     -moz-border-radius-bottomleft: 4px;
     border-bottom-right-radius: 4px;
     border-bottom-left-radius: 4px;
-  }
-  
-  .range-controls .scale {
+}
+.range-controls .scale {
     height: 2px;
     background: #d7dcde;
-  }
-  
-  .range-controls .bar {
+}
+.range-controls .bar {
     width: 80%;
     height: 2px;
     background: #00ca74;
-  }
-  
-  .range-toggle {
+}
+.range-toggle {
     position: absolute;
     top: 28px;
     width: 4px;
@@ -1713,32 +1678,26 @@ body {
     border-radius: 50%;
     box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
     cursor: pointer;
-  }
-  
-  .range-toggle:hover {
+}
+.range-toggle:hover {
     background: #1c4f80;
-  }
-  
-  .range-toggle-min {
+}
+.range-toggle-min {
     left: 20px;
-  }
-  
-  .range-toggle-max {
+}
+.range-toggle-max {
     left: calc(80% - 16px);
-  }
+}
 
   /* Text inputs */
-  .form {
-    
-  }
-  .form label {
-      display: block;
-      font-size: 20px;
-      margin-bottom: 5px;
-  }
-  .form textarea,
-  .form input[type=email],
-  .form input[type=text] {
+.form label {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.form textarea,
+.form input[type=email],
+.form input[type=text] {
     padding: 10px;
     border: 2px #dee3e4 solid;
     border-radius: 3px;
@@ -1747,7 +1706,7 @@ body {
     min-width: 220px;
     box-sizing: border-box;
     margin-bottom: 15px;
-  }
-  .form textarea {
-      min-height: 115px;
-  }
+}
+.form textarea {
+    min-height: 115px;
+}
