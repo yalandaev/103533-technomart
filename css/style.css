@@ -846,7 +846,7 @@ body {
 .user-sub-navigation {
     font-size: 16px;
     list-style: none;
-    margin-top: 8px;
+    margin-top: 0px;
     margin-left: 19px;
 }
 .user-sub-navigation li {
@@ -1135,6 +1135,9 @@ body {
 /* Default case - full page width (4 items per row) */
 .main-popular-products .catalog-item:nth-child(4n) {
     margin-right: 0;
+}
+.main-popular-products__catalog-items {
+    margin-bottom: 20px;
 }
 /* Catalog case (3 items per row) */
 .catalog__content .catalog-item:nth-child(3n) {
