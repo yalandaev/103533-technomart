@@ -408,14 +408,22 @@ body {
 
 /* Ribbons */
 .ribbon p {
-    background: lightgray;
     color: #fff;
     text-decoration: none;
     font-family: "PTSans", Arial, sans-serif;
+    font-size: 14px;
     text-align: center;
-    padding: 5px 30px;
+    padding: 0px 30px;
     line-height: 27px;
     position: relative;
+    width: 200px;
+    top: -8px;
+    right: -50px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
 }
 .ribbon--red p {
     background: #ee3643;
@@ -436,15 +444,30 @@ body {
     z-index: 100;
     pointer-events: none;
 }
-.ribbon p {
+/* ribbon-pseudo */
+/* Doesn't work in IE/Edge */
+.ribbon-ps::after {
+    position: absolute;
+    background: #ee3643;
+    display: block;
+    padding-left: 88px;
+    padding-top: 20px;
+    color: white;
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 200px;
+    z-index: 100;
+    pointer-events: none;
+    content: "new";
     width: 200px;
-    top: -10px;
-    right: -42px;
+    top: -30px;
+    right: -30px;
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -o-transform: rotate(45deg);
+    clip-path: polygon(42.5% 8%, 57.5% 8%, 70.5% 21%, 29.5% 21%);
 }
 /* Sections common styles */
 .section {
