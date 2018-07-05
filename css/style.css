@@ -407,67 +407,24 @@ body {
 }
 
 /* Ribbons */
-.ribbon p {
-    color: #fff;
-    text-decoration: none;
-    font-family: "PTSans", Arial, sans-serif;
-    font-size: 14px;
-    text-align: center;
-    padding: 0px 30px;
-    line-height: 27px;
-    position: relative;
-    width: 200px;
-    top: -8px;
-    right: -50px;
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-}
-.ribbon--red p {
-    background: #ee3643;
-}
-.ribbon p::after {
-    bottom: 1px;
-    top: auto;
-}
-.ribbon {
-    position: absolute;
-    display: inline-block;
-    vertical-align: top;
-    top: 0;
-    right: 0;
-    width: 200px;
-    overflow: hidden;
-    height: 200px;
-    z-index: 100;
-    pointer-events: none;
-}
-/* ribbon-pseudo */
-/* Doesn't work in IE/Edge */
-.ribbon-ps::after {
-    position: absolute;
-    background: #ee3643;
+.ribbon-new::after {
+    content: 'new';
+    background-color: #ee3643;
     display: block;
-    padding-left: 88px;
-    padding-top: 20px;
+    text-align: center;
+    width: 100px;
+    height: 25px;
     color: white;
-    box-sizing: border-box;
-    overflow: hidden;
-    height: 200px;
-    z-index: 100;
-    pointer-events: none;
-    content: "new";
-    width: 200px;
-    top: -30px;
+    position: absolute;
     right: -30px;
+    top: 10px;
+    z-index: 100;
+    line-height: 25px;
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -o-transform: rotate(45deg);
-    clip-path: polygon(42.5% 8%, 57.5% 8%, 70.5% 21%, 29.5% 21%);
 }
 /* Sections common styles */
 .section {
@@ -941,6 +898,7 @@ body {
     margin-right: 20px;
     margin-bottom: 20px;
     position: relative;
+    overflow: hidden;
 }
 .feature:nth-child(4),
 .feature:nth-child(6),
@@ -1099,6 +1057,7 @@ body {
 .catalog-item {
     height: 318px;
     width: 220px;
+    overflow: hidden;
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
