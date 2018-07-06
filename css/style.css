@@ -242,6 +242,7 @@ body {
     display: inline-block;
     width: 220px;
     min-width: 220px;
+    z-index: 10;
 }
 .logo:hover {
     background: #ca2c37;
@@ -394,7 +395,8 @@ body {
 	position: absolute;
 	border-left-color: #ee3643;
 	border-width: 19px;
-	margin-top: -19px;
+    margin-top: -19px;
+    box-shadow: -2px 0px 0 0 #ee3643;
 }
 /* Panels */
 .panel {
@@ -588,7 +590,7 @@ body {
     color: white;
     display: inline-block;
     vertical-align: top;
-    width: 100%;
+    width: 270px;
     position: relative;
 }
 .header__search-form svg {
@@ -1041,6 +1043,7 @@ body {
     color: #32425c;
 }
 .catalog-items {
+    width: 700px;
     margin: 0;
     padding: 0;
     display: -webkit-box;
@@ -1097,6 +1100,7 @@ body {
 }
 .main-popular-products__catalog-items {
     margin-bottom: 20px;
+    width: 940px;
 }
 /* Catalog case (3 items per row) */
 .catalog__content .catalog-item:nth-child(3n) {
