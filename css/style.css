@@ -427,17 +427,17 @@ body {
 /* Sections common styles */
 .section {
     background: #f4f8fa;
-    padding-top: 63px;
+    padding-top: 68px;
 }
 .section-title {
     color: black;
     font-size: 30px;
+    line-height: 30px;
     text-transform: uppercase;
     display: inline-block;
     vertical-align: top;
     margin: 0;
-    margin-bottom: 24px;
-    letter-spacing: -1px;
+    margin-bottom: 25px;
 }
 .section-description {
     font-family: "PTSans", Arial, sans-serif;
@@ -465,7 +465,7 @@ body {
     padding-right: 24px;
     padding-top: 25px;
     padding-bottom: 26px;
-    padding-left: 28px;
+    padding-left: 25px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     -webkit-box-align: center;
@@ -478,10 +478,9 @@ body {
     -webkit-box-flex: 1;
         -ms-flex: auto;
             flex: auto;
-    line-height: 89px;
     vertical-align: middle;
+    padding-top: 4px;
     margin: 0;
-    letter-spacing: -1px;
 }
 .section-header__btn {
     padding-left: 55px;
@@ -560,7 +559,7 @@ body {
 }
 .header__button--cart span,
 .header__button--bookmarks span {
-    padding-left: 16px;
+    padding-left: 21px;
 }
 .header__button--cart:focus path,
 .header__button--cart:hover path,
@@ -735,7 +734,7 @@ body {
     display: inline-block;
     line-height: 45px;
     font-size: 21px;
-    margin-bottom: 10px;
+    margin-bottom: 7px;
 }
 .user-navigation__item a {
     color: black;
@@ -1421,6 +1420,7 @@ body {
 /* Section */
 .words-about {
     padding-bottom: 68px;
+    padding-top: 66px;
 }
 /* Manufacturers */
 .section-header__btn--manufacturers {
@@ -1478,10 +1478,11 @@ body {
 
 /* Section - Services */
 .section-company-contacts {
-    padding-bottom: 86px;
+    padding-bottom: 87px;
 }
 .main-services {
-    padding-bottom: 23px;
+    padding-bottom: 24px;
+    padding-top: 67px;
 }
 .main-services__tab-panel {
     display: -webkit-box;
@@ -1837,7 +1838,7 @@ body {
     text-transform: uppercase;
     font-size: 13px;
     background: url(../img/icon-home.svg) -2px 3px no-repeat;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     padding-left: 30px;
     line-height: 18px;
 }
@@ -1851,6 +1852,7 @@ body {
     position: relative;
     padding-left: 22px;
     padding-right: 18px;
+    margin-top: 2px;
 }
 .breadcrumbs li::before {
     display: block;
