@@ -5,4 +5,4 @@
 
 ---
 
-<img width="769" alt="" src="cert.jpg">
+<img width="769" alt="" src="cert.JPG">
